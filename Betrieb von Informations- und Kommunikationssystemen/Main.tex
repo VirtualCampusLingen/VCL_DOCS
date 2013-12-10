@@ -1,0 +1,114 @@
+% HS Vorlage
+% ------------------------------------------------------------------------------
+%   erstellt von Jannik Fangmann, 08.02.2013   
+ 
+\documentclass[
+    11pt, % Schriftgröße
+    DIV10,
+    ngerman, % für Umlaute, Silbentrennung etc.
+    a4paper, % Papierformat
+    oneside, % einseitiges Dokument
+    titlepage, % es wird eine Titelseite verwendet
+    parskip=half, % Abstand zwischen Absätzen (halbe Zeile)
+    headings=normal, % Größe der Überschriften verkleinern
+    listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
+    bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
+    index=totoc, % Index im Inhaltsverzeichnis aufführen
+    captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
+    final % Status des Dokuments (final/draft)
+]{scrartcl}
+
+% Meta-Informationen -----------------------------------------------------------
+%   Informationen über das Dokument, wie z.B. Titel, Autor, Matrikelnr. etc
+%   werden in der Datei Meta.tex definiert und können danach global
+%   verwendet werden.
+% ------------------------------------------------------------------------------
+\input{Meta}
+
+% Erstellung eines Index aktivieren --------------------------------------------
+\makeindex
+
+\input{Packages}
+
+% Kopf- und Fußzeilen, Seitenränder etc. ---------------------------------------
+\input{Seitenstil}
+
+% eigene LaTeX-Befehle
+\input{Befehle}
+
+% Das eigentliche Dokument -----------------------------------------------------
+%   Der eigentliche Inhalt des Dokuments beginnt hier. Die einzelnen Seiten
+%   und Kapitel werden in eigene Dateien ausgelagert und hier nur inkludiert.
+% ------------------------------------------------------------------------------
+\begin{document}
+
+% auch subsubsection nummerieren
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Deckblatt und Abstract ohne Seitenzahl
+\ofoot{}
+\include{Deckblatt}
+
+% Abstract----------------------------------------------------------------------
+% \include{Inhalt/Abstract}
+% ------------------------------------------------------------------------------
+\ofoot{\pagemark}
+
+% Seitennummerierung -----------------------------------------------------------
+%   Vor dem Hauptteil werden die Seiten in gro�en r�mischen Ziffern 
+%   nummeriert.
+% ------------------------------------------------------------------------------
+
+\pagenumbering{Roman}
+\pdfbookmark[1]{Inhaltsverzeichnis}{toc} % Inhaltsverzeichnis als PDF-Bookmark
+\tableofcontents % Inhaltsverzeichnis
+
+% Abk�rzungsverzeichnis --------------------------------------------------------
+% \input{Inhalt/Glossar}
+
+% für korrekte Überschrift in der Kopfzeile
+% \clearpage
+%\markboth{\nomname}{\nomname} 
+
+% Abbildungsverzeichnis --------------------------------------------------------
+% \listoffigures 
+% ------------------------------------------------------------------------------
+
+% arabische Seitenzahlen im Hauptteil ------------------------------------------
+\clearpage
+\pagenumbering{arabic}
+
+% die Inhaltskapitel werden in "Inhalt.tex" inkludiert -------------------------
+\input{Inhalt}
+
+% Literaturverzeichnis ---------------------------------------------------------
+%   Das Literaturverzeichnis wird aus der BibTeX-Datenbank "Literatur.bib"
+%   erstellt.
+% ------------------------------------------------------------------------------
+\clearpage
+\bibliographystyle{natdin}
+\bibliography{Literatur}
+
+% Index ------------------------------------------------------------------------
+% \printindex
+ 
+% \input{Erklaerung} % Selbständigkeitserklärung
+
+% Ausarbeitung auf CD ----------------------------------------------------------
+% \include{CD} 
+% ------------------------------------------------------------------------------
+
+% Anhang -----------------------------------------------------------------------
+%   Die Inhalte des Anhangs werden analog zu den Kapiteln inkludiert.
+%   Dies geschieht in der Datei "Anhang.tex".
+% ------------------------------------------------------------------------------
+\clearpage
+\begin{appendix}
+    \pagenumbering{roman}
+    % Rand der Aufz�hlungen in Tabellen anpassen
+    \setdefaultleftmargin{1em}{}{}{}{}{}
+    \input{Anhang}
+\end{appendix}
+
+\end{document}
