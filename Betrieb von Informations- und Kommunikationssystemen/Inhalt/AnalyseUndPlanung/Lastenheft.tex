@@ -1,0 +1,61 @@
+\subsection{Lastenheft}
+\label{sec:Lastenheft}
+
+% TODO: Verweis auf Unternehmensführung richtig machen
+% TODO: Lastenheft hier und im Original überarbeiten!!!!
+Nach der Analyse der Ist-Situation gilt es im Folgenden das konkrete Ziel und die Funktionen des Projektes zu definieren. 
+Zu diesem Zweck wurde aufbauend auf der Konzeptentwicklung (siehe Kapitel XX Ausarbeitung Unternehmensführung) eine 
+Lastenheft angefertigt (Verweis auf Lastenheft Literatur).
+
+Im Lastenheft ist das folgende Ziel für das vorliegende Projekt definiert:
+
+"`"'Ziel des Projektes Virtueller Campus Lingen ist es den Standort der Hochschule Osnabrück
+in Lingen virtuell darzustellen sowie alle vier Institutionen mit ihren Studienangeboten
+vorzustellen."`"' (Quelle: Lastenheft)
+Die Darstellung des Campus soll dabei im Stile von Goole Street View\copyright in 360-Grad Panoramafotos erfolgen, in 
+denen sich ein Nutzer der Software frei umsehen kann. Darüber hinaus soll ein Backendsystem zur Pflege und Wartung der 
+Software entwickelt werden (Quelle: Lastenheft).
+
+Zur Erfüllung der Zielbestimmung des Lastenheftes sind darin folgende Produktfunktionen definiert:
+
+\textbf{Benutzerfunktionen}:
+
+\begin{description}
+  \item[LF0010] Einem beliebigen Internetnutzer muss es möglich sein, ohne Anmeldung auf die Anwendung zugreifen zu können.
+  \item[LF0015] Beim Starten der Anwendung soll dem Benutzer ein 360-Grad Panorama vom Eingangsbereich des Campus Lingen 
+  präsentiert werden.
+  \item[LF0020] Der Benutzer muss sich in den 360-Grad Fotos der Anwendung frei umsehen können.
+  \item[LF0030] Der Benutzer muss zwischen den Fotos navigieren können.
+  \item[LF0040] Die Anwendung muss eine Übersichtkarte enthalten, die sowohl den aktuellen Standpunkt, als auch alle 
+  weiteren Einstiegspunkte umfasst.
+  \item[LF0050] Die Übersichtskarte stellt alle Gebäude des Campus Lingen in Vogelperspektive dar. Innerhalb der 
+  Übersichtskarte sind alle Einstiegspunkte in die 360-Grad-Ansicht enthalten.
+  \item[LF0060] Die Minimap soll in der oberen linken Ecke des 360-Grad-Fotos angezeigt werden.Sie stellt einen Ausschnitt 
+  der Übersichtskarte dar.
+  \item[LF0070] In den 360-Grad-Fotos müssen relevante Informationen zu den dargestellten Örtlichkeiten angezeigt werden können.
+\end{description}
+
+\textbf{Backendfunktionen}:
+
+\begin{description}
+  \item[LF1010] Die Anwendung muss durch den Administrator offline geschaltet werden können.
+  \item[LF1020] Der Administrator muss neue Fotos in die Anwendung einpflegen können. Die Fotos können hierbei an beliebigen Punkten auf einem Wegenetz positioniert werden.
+  \item[LF1025] Ein Wegenetz muss dem Administrator als Positionierungseinschränkung für neue 306-Grad-Fotos zur Verfügung stehen.
+  \item[LF1030] Der Administrator muss veraltete Fotos in der Anwendung austauschen können.
+  \item[LF1040] Der Administrator muss Informationstexte zu den 360-Grad-Fotos hinzufügen, abändern und löschen können. Diese Informationstexte können zum Beispiel Projektvorstellungen enthalten. Der Informationstext besteht aus einem Pop-Up mit Einführungstext und weiterführenden Links.
+  \item[LF1110] Der Administrator muss sich mit einem Passwort authentifizieren können.
+  \item[LF1120] Der Administrator muss das Passwort abändern können.
+\end{description}
+
+Diese Funktionen sind zur Erfüllung der Zielsetzung zu implementieren. Neben diesen Funktionen gehen aus dem Lastenheft 
+auch folgende Produktdaten hervor:
+
+\begin{description}
+  \item[LD0010] 360-Grad Fotos
+  \item[LD0020] Informationstexte zu den 360-Grad-Fotos
+  \item[LD0030] Benutzername des Administrators
+  \item[LD0040] Passwort des Administrators
+  \item[LD0050] Wegenetz
+\end{description}
+
+Diese sind vor dem Hintergrund der späteren Datenbankplanung zu berücksichtigen.
