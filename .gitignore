@@ -7,3 +7,6 @@ tmp/
 *.gz
 *.brf
 *.pdf
+*.bbl
+*.bbg
+*.blg
