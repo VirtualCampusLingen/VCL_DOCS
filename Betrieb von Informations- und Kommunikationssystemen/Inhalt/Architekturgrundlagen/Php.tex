@@ -1,28 +1,26 @@
 \subsection{PHP}
 \label{sec:Php}
 
-PHP (Hypertext Preprocessor) ist eine Serverseitige Skriptsprache, die mit den Ziel entwickelt wurde Webseiten dynamisch
+PHP (Hypertext Preprocessor) ist eine serverseitige Skriptsprache, die mit den Ziel entwickelt wurde Webseiten dynamisch
 zu gestalten.
 Mit dieser Intention wurde auch im vorliegenden Projekt PHP als Serversprache verwendet. Die nachfolgend beschriebenen
 Grundlagen vermitteln die wichtigsten Aspekte der Sprache PHP, die nötig sind, um die Umsetzung des Projektes
 nachvollziehen zu können.
-Im Gegensatz zu der vorher beschrieben Skriptsprache Javascript ist PHP eine Serverseitige Skriptsprache. Dadurch sind
+Im Gegensatz zu der vorher beschrieben Skriptsprache Javascript ist PHP eine serverseitige Skriptsprache. Dadurch sind
 zwei grundlegende Unterschiede zu Javascript bedingt:
 
 \textbf{1}. PHP wird, wie die Beschreibung Serverskriptsprache bereits suggeriert, nicht auf dem Client (dem Browser des Nutzers),
-sondern auf dem Webserver der Anwendung ausgeführt. Bei einer Nutzeranfrage an den Webserver wird also erst eine
-serverseitig PHP-Routine ausgeführt (wenn vorhanden) und anschließend wird das angefragte Dokument, inklusive
-Javascriptdateien, an den Client (Browser) ausgeliefert und dort wird dann Javascript ausgeführt (wenn vorhanden).
+sondern auf dem Webserver der Anwendung ausgeführt. Bei einer Nutzeranfrage an den Webserver wird also erst eine PHP-Routine serverseitig ausgeführt und anschließend wird das angefragte Dokument, inklusive
+Javascriptdateien, an den Client (Browser) ausgeliefert und dort wird dann Javascript ausgeführt.
 
-\textbf{2}. PHP hat weitestgehend vollen Ressourcenzugriff auf dem ausführenden System (stimmt das?). Durch PHP-Befehle ist es zum
-Beispiel möglich Dateien auf dem ausführenden System (Webserver) Dateien anzulegen und zu löschen (stimmt das?).
+\textbf{2}. PHP hat weitestgehend vollen Ressourcenzugriff auf dem ausführenden System (stimmt das?). Durch PHP-Befehle ist es zum Beispiel möglich Dateien auf dem ausführenden System (Webserver) anzulegen und zu löschen (stimmt das?).
 Diese beiden Unterschiede sind wichtig, um das Einsatzfeld von PHP zu verstehen.
 
 PHP wird im vorliegenden Projekt für die folgenden Aufgaben eingesetzt:
 \begin{itemize}
   \item Kommunikation mit der Datenbank
   \item Schreiben von dynamischen HTML
-  \item Kopieren von Benutzerdateien (Videos) auf das ausführende System.
+  \item Kopieren von Benutzerdateien auf das ausführende System.
 \end{itemize}
 
 Diese Aufgaben werden im späteren Verlauf ausführlicher beleuchtet, an dieser Stelle soll die Listung dieser Aufgaben
