@@ -5,7 +5,7 @@ Eine Datenbank ist das Rückgrat jedes datenverarbeitenden Informationssystems. 
 verschiedenen Kontexten anzutreffen (Web-, ERP-, Mobile-Systeme, etc.). Die nachfolgende theoretische Fundierung dient zum 
 Verständnis des Einsatzes der Datenbank im vorliegenden Projekt.
 
-"`Eine Datenbank ist eine Sammlung von Daten, die einen Ausschnitt der realen Welt beschreibt."' (Quelle: elmasri2009) 
+"`Eine Datenbank ist eine Sammlung von Daten, die einen Ausschnitt der realen Welt beschreibt."'\footnote{\citet{elmasri2009}}
 Diese
 Sammlung von Daten kann dabei sowohl in Papierform, als auch elektronisch und computergestützt aufbewahrt werden. Vor dem 
 Hintergrund des vorliegenden Projektes gilt die weitere Betrachtung aber ausschließlich den computergestützten Datenbanken.
@@ -22,15 +22,14 @@ unterscheiden. Die wichtigsten Datenbanktypen sind im Folgenden aus Gründen der
 Der Fokus dieser Spezialisierung liegt im Folgenden wiederum auf der eingesetzten Technologie des Projektes und damit auf 
 relationalen Datenbanken. 
 
-Eine relationale Datenbank beruht auf dem relationalen Datenbankmodell von Edgar F. Codd aus dem Jahre 1970 (Verweis: 
-codd1970). Grundlage dieses Modells ist der Begriff der Relation, der im Wesentlichen
+Eine relationale Datenbank beruht auf dem relationalen Datenbankmodell von Edgar F. Codd aus dem Jahre 1970.\footnote{siehe dazu \citet{codd1970}} Grundlage dieses Modells ist der Begriff der Relation, der im Wesentlichen
 eine mathematische Beschreibung einer Tabelle darstellt. Eine relationale Datenbank ist damit eine Sammlung von Tabellen.
 
 Auf den Relationen (Tabellen) einer solchen Datenbank sind bestimmte Operationen definiert, die im Kontext der Mathematik 
 der relationalen Algebra und im Kontext von Datenbanken dem Begriff SQL entsprechen.
 
 SQL steht für Structured Query Language und stammt, genau wie das relationale Datenbankmodell, aus dem Jahre 1970. Es 
-wurde ebenfalls von Edgar F. Codd mitentwickelt (Quelle: kline2005). Über einen Entwicklungszeitraum von mehreren Jahrzehnten 
+wurde ebenfalls von Edgar F. Codd mitentwickelt.\footnote{\citet{kline2005}} Über einen Entwicklungszeitraum von mehreren Jahrzehnten 
 wurde SQL zu einer komplexen Sprache, die umfangreiche Möglichkeiten bietet. Dieser Gesamtkomplex wird hier stark verkürzt
 dargestellt und beschränkt sich nur auf die wesentlichen Aspekte, die dem Verständnis des Projektes dienen.
 
@@ -45,6 +44,6 @@ Bereiche zu trennen sind in SQL drei Sprachbereiche definiert.
 
 Die Sprachbereiche DDL und DCL haben dabei in der Projektentwicklung eher einmaligen Charakter, wohingegen DML 
 kontinuierlich verwendet wird, um dynamisch Informationen zu schreiben oder zu lesen. Die DML tritt dabei als 
-Schnittstelle zwischen Anwendungsprogramm und Datenbank auf (siehe Architekturentwurf). Über die DML sind beispielsweise 
+Schnittstelle zwischen Anwendungsprogramm und Datenbank auf (siehe Abbildung: \nameref{fig:Architektur}). Über die DML sind beispielsweise 
 Befehle definiert, die es erlauben einen Datensatz einer Tabelle zu lesen oder zu verändern. Diese Befehle werden im 
 Anwendungsprogramm aufgerufen und erzeugen damit dynamischen Inhalt für den Anwender.
