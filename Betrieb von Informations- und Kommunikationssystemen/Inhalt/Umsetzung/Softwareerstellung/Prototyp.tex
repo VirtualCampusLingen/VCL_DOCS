@@ -7,9 +7,9 @@ Da der Prototyp nur einen statischen Einblick (kein dynamischer Inhalt aus einer
 
 \lstinputlisting[language=HTML,caption={HTML Prototyp},label={lst:HTML Prototyp}]{Listings/HTML_Prototyp.html}
 
-Das dargestellte HTML-Dokument bindet in Zeile 5 die angesprochene Google Street View API, in der Funktionen zur Darstellung des 360 Grad Panoramas definiert sind. Zusätzlich wird in Zeile 6 eine Javascript-Datei eingebunden, in der die Funktionen der Google Street View API auferufen werden. Im Body-Bereich des HTML-Dokumentes ist dafür ein Element definiert das als Fläche zur Darstellung der Panoramas genutzt wird. Die eingebundene Javascript-Datei aus Zeile 6 ist aus Platzgründen in \listing{Javascript Prototyp} in Anhang ~\ref{sec:AnhangJavascriptPrototyp} dargestellt. Dessen Funktionalität wird an dieser Stelle kurz erläutert.
+Das dargestellte HTML-Dokument bindet in Zeile 5 die angesprochene Google Street View API ein, in der Funktionen zur Darstellung des 360 Grad Panoramas definiert sind. Zusätzlich wird in Zeile 6 eine Javascript-Datei eingebunden, in der die Funktionen der Google Street View API auferufen werden. Im Body-Bereich des HTML-Dokumentes ist dafür ein Element definiert das als Fläche zur Darstellung der Panoramas genutzt wird. Die eingebundene Javascript-Datei aus Zeile 6 ist aus Platzgründen in \listing{Javascript Prototyp} in Anhang ~\ref{sec:AnhangJavascriptPrototyp} dargestellt. Dessen Funktionalität wird an dieser Stelle kurz erläutert.
 
-Sobald der Internetbrowser des Benutzers das HTML-Dokument fertig geladen hat, wird eine Methode aufgerufen, die benötigte Parameter zur Erstellung des Panoramas bereitstellt\footnote{Vergleiche Zeile 3 im Anhang XX}. Hier werden Zoomstufe, Ausrichtung und weitere Parameter festgelegt. Anschließend wird ein Panorama-Objekt mit Hilfe der Google Street View API erstellt und an das oben beschriebene HTML-Element im Body-Bereich gebunden\footnote{Vergleiche Zeile 16-18 im Anhang XX}. Über einen weiteren Aufruf einer API-Funktion können an das Panorama sogenannte "`Links"' gehängt werden. Diese Links stellen später für den Benutzer die Pfeile am Boden dar über die zu anderen Panoramas navigiert werden kann. Im Prototyp wird nur der Verweis auf ein anderes Panorama gebraucht, das über die Funktion "`createCustomLinks"'\footnote{vergleiche Zeile 45ff. im Anhang XX} als Link angehängt wird.
+Sobald der Internetbrowser des Benutzers das HTML-Dokument fertig geladen hat, wird eine Methode aufgerufen, die benötigte Parameter zur Erstellung des Panoramas bereitstellt\footnote{Vergleiche Zeile 3 im Anhang ~\ref{sec:AnhangJavascriptPrototyp}}. Hier werden Zoomstufe, Ausrichtung und weitere Parameter festgelegt. Anschließend wird ein Panorama-Objekt mit Hilfe der Google Street View API erstellt und an das oben beschriebene HTML-Element im Body-Bereich gebunden\footnote{Vergleiche Zeile 16-18 im Anhang ~\ref{sec:AnhangJavascriptPrototyp}}. Über einen weiteren Aufruf einer API-Funktion können an das Panorama sogenannte "`Links"' gehängt werden. Diese Links stellen später für den Benutzer die Pfeile am Boden dar über die zu anderen Panoramas navigiert werden kann. Im Prototyp wird nur der Verweis auf ein anderes Panorama gebraucht, das über die Funktion "`createCustomLinks"'\footnote{vergleiche Zeile 45ff. im Anhang ~\ref{sec:AnhangJavascriptPrototyp}} als Link angehängt wird.
 
 Ein Bildschirmfoto des Prototypen der mit diesen zwei Dateien (HTML- und Javascript-Dokument) erstellt wurde ist in \abbildung{PrototypScreenshot} zu sehen.
 
@@ -17,6 +17,6 @@ Ein Bildschirmfoto des Prototypen der mit diesen zwei Dateien (HTML- und Javascr
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{PrototypScreenshot.png}
-\caption[PrototypScreenshot]{Bildschirmfoto des Prototypen}
+\caption[Protoyp Bildschirmfoto]{Bildschirmfoto des Prototypen}
 \label{fig:PrototypScreenshot}
 \end{figure}
