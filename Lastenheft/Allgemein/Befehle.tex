@@ -1,0 +1,58 @@
+﻿% Eigene Befehle und typographische Auszeichnungen f�r diese
+
+% einfaches Wechseln der Schrift, z.B.: \changefont{cmss}{sbc}{n}
+\newcommand{\changefont}[3]{\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+
+% Abk�rzungen mit korrektem Leerraum 
+\newcommand{\ca}{ca.\ }
+\newcommand{\Vgl}{Vgl.\ }
+\newcommand{\bzw}{bzw.\ }
+\newcommand{\etc}{etc.\ }
+\newcommand{\inkl}{inkl.\ }
+\newcommand{\evtl}{evtl.\ }
+\newcommand{\ggfs}{ggfs.\ }
+\newcommand{\usw}{usw.\ }
+
+\newcommand{\abbildung}[1]{Abbildung~\ref{fig:#1} (\nameref{fig:#1})}
+\newcommand{\listing}[1]{Listing~\ref{lst:#1} (\nameref{lst:#1})}
+\newcommand{\verweis}[1]{Abschnitt~\ref{sec:#1} (\nameref{sec:#1})}
+
+\newcommand{\bs}{$\backslash$}
+
+\newcommand{\AO}{\textsc{Alte Oldenburger}\xspace}
+
+% Setzt ein Wort in Anführungszeichen
+\newcommand{\gqq}[1]{\glqq{}#1\grqq{}}
+
+% erzeugt ein Listenelement mit fetter Überschrift 
+\newcommand{\itemd}[2]{\item{\textbf{#1}}\\{#2}}
+
+% einige Befehle zum Zitieren --------------------------------------------------
+\newcommand{\Zitat}[2][\empty]{\ifthenelse{\equal{#1}{\empty}}{\citep{#2}}{\citep[#1]{#2}}}
+
+% zum Ausgeben von Autoren
+\newcommand{\Autor}[1]{\textsc{#1}}
+
+% verschiedene Befehle um Wörter semantisch auszuzeichnen ----------------------
+\newcommand{\Index}[2][\empty]{\ifthenelse{\equal{#1}{\empty}}{\index{#2}#2}{\index{#1}#2}}
+\newcommand{\Fachbegriff}[2][\empty]{\ifthenelse{\equal{#1}{\empty}}{\textit{\Index{#2}}}{\textit{\Index[#1]{#2}}}}
+\newcommand{\NeuerBegriff}[2][\empty]{\ifthenelse{\equal{#1}{\empty}}{\textbf{\Index{#2}}}{\textbf{\Index[#1]{#2}}}}
+
+\newcommand{\Ausgabe}[1]{\texttt{#1}}
+\newcommand{\Eingabe}[1]{\texttt{#1}}
+\newcommand{\Code}[1]{\texttt{#1}}
+\newcommand{\Datei}[1]{\texttt{#1}}
+
+\newcommand{\Assembly}[1]{\textsf{#1}}
+\newcommand{\Klasse}[1]{\textsf{#1}}
+\newcommand{\Methode}[1]{\textsf{#1}}
+\newcommand{\Attribut}[1]{\textsf{#1}}
+
+\newcommand{\Datentyp}[1]{\textsf{#1}}
+\newcommand{\XMLElement}[1]{\textsf{#1}}
+\newcommand{\Webservice}[1]{\textsf{#1}}
+
+\newcommand{\Refactoring}[1]{\Fachbegriff{#1}}
+\newcommand{\CodeSmell}[1]{\Fachbegriff{#1}}
+\newcommand{\Metrik}[1]{\Fachbegriff{#1}}
+\newcommand{\DesignPattern}[1]{\Fachbegriff{#1}}
