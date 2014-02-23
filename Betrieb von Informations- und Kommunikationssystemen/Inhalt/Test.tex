@@ -3,34 +3,14 @@
 
 Die zu erstellende Software ist mit Abschluss der Umsetzungsphase fertiggestellt und einsatzbereit. Vor Projektabschluss und -übergabe soll die Software auf seine Qualität geprüft werden. Es soll darüber hinaus verifiziert werden, dass die Anforderungen des Lastenheftes umgesetzt wurden. Sowohl Qualität, als auch die Umsetzung der Anforderungen wird im Folgenden in einem zweistufigen Praxistest der Software sichergestellt.
 
-Im ersten Schritt wird die Software einem Alphatest unterzogen. Ein Alphatest liegt immer dann vor, wenn die Tests von Personen durchgeführt werden, die an der Entwicklung eines Produktes beteiligt waren, in diesem Fall das Projektteam. In diesem Test werden vor allem die Produktfunktionen des Lastenheftes (siehe Seite \pageref{sec:Lastenheft}) durchgespielt. In diesem Test sollen erste grobe Fehler in Bedienung, Anzeige und Verhalten gefunden werden und es soll zusätzlich sichergestellt werden, dass alle Anforderungen des Auftraggebers umgesetzt sind. Die Tests der Produktfunktionen werden zusätzlich in den vier führenden Browsern\footnote{Quelle: \url{http://www.chip.de}} durchgeführt, um browserübergreifende Funktionalität sicherzuestellen und dabei jeweils in die Bereiche Bedienung (\textbf{B}), Anzeige (\textbf{A}) und Verhalten(\textbf{V}) unterteilt. Das Ergbeniss des durchgeführten Alphatests ist in nachfolgender Tabelle festgehalten.
+Im ersten Schritt wird die Software einem Alphatest unterzogen. Ein Alphatest liegt immer dann vor, wenn die Tests von Personen durchgeführt werden, die an der Entwicklung eines Produktes beteiligt waren, in diesem Fall das Projektteam. In diesem Test werden vor allem die Produktfunktionen des Lastenheftes (siehe Seite \pageref{sec:Lastenheft}) durchgespielt. In diesem Test sollen erste grobe Fehler in Bedienung, Anzeige und Verhalten gefunden werden und es soll zusätzlich sichergestellt werden, dass alle Anforderungen des Auftraggebers umgesetzt sind. Die Tests der Produktfunktionen werden zusätzlich in den vier führenden Browsern\footnote{Quelle: \url{http://www.chip.de}} durchgeführt, um browserübergreifende Funktionalität sicherzuestellen und dabei jeweils in die Bereiche Bedienung (\textbf{B}), Anzeige (\textbf{A}) und Verhalten(\textbf{V}) unterteilt. Das Ergbeniss des durchgeführten Alphatests ist in nachfolgender \abbildung{Alphatest} festgehalten:
 
-\begin{table}[htbp]
-  \centering
-    \begin{tabular}{l|cccc}
-    \toprule
-          & Google Chrome & Mozilla Firefox & Internet Explorer & Safari \\
-    \midrule
-    LF0010 &       &       & X     &  \\
-    LF0015 &       &       & X     &  \\
-    LF0020 &       &       & X     &  \\
-    LF0030 & X     &       &       &  \\
-    LF0040 &       &       & X     &  \\
-    LF0050 &       & X     &       &  \\
-    LF0060 &       & X     &       &  \\
-    LF0070 &       & X     &       &  \\
-    LF1010 &       & X     &       &  \\
-    LF1020 &       & X     &       &  \\
-    LF1025 &       & X     &       &  \\
-    LF1030 &       & X     &       &  \\
-    LF1040 &       & X     &       &  \\
-    LF1110 &       & X     &       &  \\
-    LF1120 &       & X     &       &  \\
-    \bottomrule
-    \end{tabular}
-  \caption{Ergebnis des Alphatests}
-  \label{tab:ErgebnisAlphatest}
-\end{table}
-
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1.0\textwidth]{Alphatest.png}
+\caption[Mockup Backend]{Graphische Darstellung des Alphatests\protect\footnotemark}
+\label{fig:Alphatest}
+\end{figure}
+\footnotetext{Quelle: Eigene Darstellung}
 
 Die Auswertung des Alphatests zeigt, dass alle Anforderungen umgesetzt wurden und funktionsfähig sind. Die seperate Betrachtung der vier Internetbrowser zeigt darüber hinaus, dass nicht alle Browser für die Darstellung der Software geeignet sind. Besonders der "`Safari"'-Browser ist für die Darstellung der Anwendersicht nicht geeignet. Bei diesem Browser besteht eine Inkompatibilität zwischen der Technologie der benutzen Google Street View\copyright\ API und der Browserinternen Umsetzung dieser Technologie. Diese Problem lässt sich nicht durch technische Anpassungen innerhalb der Software beheben. Aus diesem Grund wurde beim Aufrufen der Software eine entsprechende Warnung für den Benutzer platziert. Es wird an dieser Stelle darüber hinaus der Google Chrome-Browser für die Verwendung dieser Software empfholen, da dieser die beste Leistung beim Laden und Anzeigen der Inhalte zeigte. Neben browserspezifischen Darstellungsunterschieden konnten in diesem Alphatest auch kleinere Schwachstellen und Fehler gefunden werden, die nicht in den Anwendungsfällen enthalten waren. Beispielsweise die falsche Verlinkung einer Datei oder das Fehlen einer Sicherheitsabfrage beim Löschen eines Datensatzes. Diese Mängel wurden im Anschluss an den Alphatest direkt beseitigt.
