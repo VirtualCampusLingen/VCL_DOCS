@@ -30,8 +30,6 @@ Syntax definiert. Diese Befehle werden im Quellcode in einem besonders gekennzei
 Bereich wird durch die Zeichenfolge '<?php' eingeleitet und mit der Zeichenfolge '?>' beendet.
 Abschließend soll die folgende Abbildung die Anwendung von PHP verdeutlichen:
 
-% TODO: Quellcode Listung einfügen
--- PHP Quellcode Beispiel --
+\lstinputlisting[language=PHP,caption={PHP Grundlagen},label={lst:PHP Grundlagen}]{Listings/PHP_Grundlagen.php}
 
--- kurze Erläuterung zum Beispiel --
-% TODO: In diesem Beispiel wird das und das und das gemacht
+In diesem Beispiel wird die Anfrage eines Benutzers ausgewertet. Die eigentliche Anfrage ist dabei nebensächlich und aus diesem Grund nicht dargestellt (auskommentiert in Zeile 2). Die Auswertung der Anfrage soll an dieser Stelle zeigen auf welchem Weg mit Hilfe von PHP dynamisches HTML geschrieben werden kann. In dem dargestellten Beispiel wird die Benutzeranfrage ausgewertet und je nachdem, was diese Anfrage zurückliefert wird ein HTML p-Tag mit anderem Inhalt geschrieben. Im Browser des Benutzers würde dadurch ausgegebn, ob seine Anfrage positiv oder negativ ausgewertet wurde.
