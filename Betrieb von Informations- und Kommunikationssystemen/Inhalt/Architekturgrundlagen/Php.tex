@@ -7,11 +7,11 @@ Mit dieser Intention wurde auch im vorliegenden Projekt PHP als Serversprache ve
 Grundlagen vermitteln die wichtigsten Aspekte der Sprache PHP, die nötig sind, um die Umsetzung des Projektes
 nachvollziehen zu können.
 Im Gegensatz zu der vorher beschrieben Skriptsprache Javascript ist PHP eine serverseitige Skriptsprache. Dadurch sind
-zwei grundlegende Unterschiede zu Javascript bedingt:
+zwei grundlegende Unterschiede zu Javascript gegeben:
 
-\textbf{1}. PHP wird, wie die Beschreibung Serverskriptsprache bereits suggeriert, nicht auf dem Client (dem Browser des Nutzers),
+\textbf{1}. PHP wird, wie die Beschreibung "`Serverskriptsprache"' bereits suggeriert, nicht auf dem Client (dem Browser des Nutzers),
 sondern auf dem Webserver der Anwendung ausgeführt. Bei einer Nutzeranfrage an den Webserver wird also erst eine PHP-Routine serverseitig ausgeführt und anschließend wird das angefragte Dokument, inklusive
-Javascriptdateien, an den Client (Browser) ausgeliefert und dort wird dann Javascript ausgeführt.
+Javascriptdateien, an den Client (Browser) ausgeliefert und dort wird dann Javascript-Quellcode ausgeführt.
 
 \textbf{2}. PHP hat weitestgehend vollen Ressourcenzugriff auf dem ausführenden System. Durch PHP-Befehle ist es zum Beispiel möglich Dateien auf dem ausführenden System (Webserver) anzulegen und zu löschen.
 Diese beiden Unterschiede sind wichtig, um das Einsatzfeld von PHP zu verstehen.
@@ -23,12 +23,11 @@ PHP wird im vorliegenden Projekt für die folgenden Aufgaben eingesetzt:
   \item Kopieren von Benutzerdateien auf das ausführende System.
 \end{itemize}
 
-Diese Aufgaben werden im späteren Verlauf ausführlicher beleuchtet, an dieser Stelle soll die Listung dieser Aufgaben
-ausreichen, um ein Verständnis für die Einsatzfelder von PHP zu bekommen.
+An dieser Stelle wird auf eine ausführliche Beschreibung dieser Aufgaben verzichtet, da diese noch im Laufe der Ausarbeitung genauer betrachtet werden. Die Einsatzfelder von PHP sollen lediglich verdeutlicht werden.
 Um diese Aufgaben zu erfüllen sind in PHP, wie in jeder anderen Programmiersprache auch, Befehle mit einer vorgebenen
 Syntax definiert. Diese Befehle werden im Quellcode in einem besonders gekennzeichneten Bereich geschrieben. Dieser
 Bereich wird durch die Zeichenfolge '<?php' eingeleitet und mit der Zeichenfolge '?>' beendet.
-Abschließend soll die folgende Abbildung die Anwendung von PHP verdeutlichen:
+Abschließend soll das folgende \listing{PHP Grundlagen} die Anwendung von PHP verdeutlichen:
 
 \lstinputlisting[language=PHP,caption={PHP Grundlagen},label={lst:PHP Grundlagen}]{Listings/PHP_Grundlagen.php}
 
