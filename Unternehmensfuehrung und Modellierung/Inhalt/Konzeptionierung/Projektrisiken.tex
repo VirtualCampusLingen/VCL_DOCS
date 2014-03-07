@@ -1,24 +1,84 @@
 \subsection{Projektrisiken}
 \label{sec:Projektrisiken}
 
-Ein Projekt in dieser größenordnung birgt einige Risiken, die
-innerhalb der Durchführung eintreffen könnten und das Erreichen der
-Projektziele gefährden.Solche Risiken können mittels Maßnahmenplanung im Fall
-des Eintritts bewältigt werden. Jedes im Projekt erkannte Risiko wird mit einer
+
+Ein Projekt in dieser größenordnung birgt einige Risiken, die innerhalb der
+Durchführung eintreffen könnten und das Erreichen der Projektziels gefährden.
+Solche Risiken können mittels Maßnahmenplanung im Fall des Eintritts bewältigt
+werden. Jedes im Projekt erkannte Risiko wird mit einer
 Eintrittswarscheinlichkeit bewertet und ein grober Plan aufgestellt, was im Fall
 des Eintritts zu unternehmen ist.
 
-Hierbei können fünf unterschiedliche Risikoarten unterschieden
-werden:
+Im durchzuführenden Projekt wurden folgende Risiken erkannt:
+
+\begin{description}
+\item[Ausfall der Server]
+Sollte der Webserver der Anwendung ausfallen ist diese nicht mehr für die Nutzer
+erreichbar und somit nicht vorhanden.
+\item[Datenverlust]
+Es besteht das Risiko eines Datenverlustes während der Entwicklung.
+\item[Ausfall der personellen Ressourcen]
+Innerhalb der Entwicklungsphase können Mitglieder des Entwicklungsteams
+krankheitsbedingt ausfallen.
+\item[Keine rechtzeitige Fertigstellung der Anwendung]
+Es besteht das Risiko das die Anwendung nicht bis zum geplanten Übergabetermin
+fertiggestellt wird.
+\item[Anwendung entspricht nicht Wünschen des Kunden]
+Die fertige Anwendung kann nicht den Wünschen des Kunden entsprechen.
+\item[Qualität der Anwendung nicht ausreichend]
+Die Anwendung entspricht nicht den Qualitätsansprüchen des Kunden.
+\item[Administration der Anwendung zu komplex]
+Es ist zu kompliziert die fertige Anwendung zu Administrieren.
+\item[Anwendung wird gehackt und missbraucht]
+Durch eine Sicherheitslücke in der Anwendung erhalten unbefugte zugriff auf die
+Anwendung. 
+\end{description}
+%ToDo: Sind das alle Risiken ? Was ist mit Datenschutz ? Sollen diese hier
+% nochmal beschrieben werden?
+
+Die erkannten Projektrisiken sind anhand von zwei Kriterien zu kategorisieren:
 
 \begin{itemize}
-  \item Kostenrisiko (nicht ausreichendes Projektbudget)
-  \item Terminrisiko (terminliche Planung wird nicht eingehalten)
-  \item Qualitätsrisiko (geforderte Qualität kann nicht eingehalten werden)
-  \item Auslastungsrisiko (persönliche Ressourcen ausgelastet)
-  \item Akzeptanzrisiko (erbrachte Ergebnis wird vom Kunden nicht akzeptiert)
+\item Warscheinlichkeit des Eintritts
+\item Ausmaß des Schadens bei Eintritt 
 \end{itemize}
-%ToDo: Qulle http:// www.pm-handbuch.com/planung/
+
+Die Kategorisierung der erfassten Risiken wird in einer sogennanten Risikomatrix
+dargestellt. An der visuell erfasst wird, wie hoch die Warscheinlichkeit eines
+bestimmten Risikos ist und wie hoch der entstehende Schaden am Projekt
+einzuschätzen ist.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccccl}
+\hline
+\multicolumn{1}{l}{} mögliches Risiko      & Wahrscheinlichkeit & Schadensausmaß
+\\ \hline 
+Ausfall der Server       	& Gering & Mittel  \\ \hline
+Datenverlust             			& Mittel & Hoch  \\ \hline
+Ausfall der personellen Ressourcen  & Mittel & Hoch \\ \hline
+keine rechtzeitige Fertigstellung des Kunden & Mittel & Hoch \\ \hline
+Anwendung entspricht nicht wünschen des Kunden & Gering & Hoch \\ \hline
+Qualität der Anwendung nicht ausreichend & Gering & Hoch \\ \hline
+Zu hoher Wartungsaufwand & Gering & Mittel \\ \hline
+Anwendung wird gehackt und missbraucht & Mittel & Mittel \\ \hline
+\end{tabular}
+\caption{Risikomatrix}%
+\label{tab:Risikomatrix}%
+\end{table}
+
+\ldots
+in Arbeit 
+\ldots
+
+
+% Beschreibung der Auswirkungen und warum diese Warscheinlichkeit Mittel und das
+% Schadensausmaß Hoch ist ??
+% Risikoanalyse?!?
+
+
+
+
 
 
 
