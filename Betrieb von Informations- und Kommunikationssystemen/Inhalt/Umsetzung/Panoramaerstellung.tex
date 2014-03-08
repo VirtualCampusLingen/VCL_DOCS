@@ -1,2 +1,86 @@
 \subsection{Panoramaerstellung}
 \label{sec:Panoramaerstellung}
+
+Die Panoramaerstellung stellt, neben der Softwareerstellung einen zentralen
+Teilprozess innerhalb der Projektumsetzung dar. Innerhalb dieses Prozesses
+werden die 360-Grad Panoramas, welche den eigentlichen Inhalt der Anwendung
+darstellen, entworfen. Im Folgenden soll der Prozess der Panoramaerstellung
+näher untersucht werden. Hierbei soll zunächst erläutert werden, in welcher
+Form die Panoramafotos vorliegen müssen, um von der Anwendung verarbeitet
+werden zu können. Weiterhin soll das Equipment vorgestellt werden, welches zur
+Umsetzung der Panoramafotos benötigt wird. Anschließend soll dann der Workflow
+der Panoramaerstellung dargestellt werden.
+
+\subsubsection{Anforderungen an die Panoramafotos}
+\label{sec:PanoramaerstellungAnforderungen}
+
+Bevor mit der Erstellung der Panoramas begonnen werden kann müssen zunächst die
+Anforderungen der Anwendung an die Panoramafotos festgelegt werden. Hierbei muss
+definiert werden, welche Kriterien die Panoramafotos erfüllen müssen, um von der
+Anwendung korrekt verarbeitet werden zu können. Relevante Kriterien sind hierbei
+die Darstellungsform, die Größe und das Format der Panoramafotos. Nachdem diese
+Schnittstelle festgelegt ist kann der Prozess der Panoramaerstellung isoliert
+vom Prozess der Softwareerstellung durchgeführt werden. Dies ermöglicht eine
+parallele Umsetzung der beiden Teilprozesse.
+
+Wie bereits in \verweis{Architektur} erwähnt soll in der Anwendung die Google
+Street View API verwendet werden. Diese Schnittstelle stellt die Funktionalität
+zur Anzeige der Panoramafotos zur Verfügung. Somit legt diese Schnittstelle auch
+fest, in welcher Form die Panoramafotos zur Verfügung gestellt werden müssen.
+Diese Anforderungen können aus der Entwicklerdokumentation zu der API entnommen
+werden. Die Schnittstelle erwartet hierbei ein Panoramafoto, welches der
+Rektangulatprojektion\footnote{Die Rektangularprojektion stellt eine
+horizontale Ansicht von 360 Grad und eine vertikale Ansicht von 180 Grad dar.
+Dies bedingt ein Seitenverhälnis von 2:1} entspricht. Durch die API wird diese
+Darstellung auf die Fläche einer Kugel projeziert. Der Mittlepunkt dieser Kugel
+stellt den Standpunkt des Betrachters dar. Da sich immer nur ein Teil der
+Projektion im Blickfeld dieses Betrachters befindet muss auch nur der aktuell
+sichtbare Bereich des Panoramafotos dargestellt werden. Aus diesem Grund bietet
+die Google Street View API die Möglichkeit, ein in mehrere rechteckige Teile,
+sogenannte Kacheln, aufgeteiltes Panoramafoto zu verarbeiten. Auf diese Weise
+kann die Performanz der Anwendung erhöht werden, da nicht das komplette
+Panoramafoto, sondern nur ein Teil der Kacheln in der Anwendung geladen werden
+muss. Damit den einzelnen Kacheln die korrekte Position auf der Planarprojektion
+zugewiesen werden kann, muss die Benennung der Kacheldateien dem Namensschema
+\texttt{Kachelspalte-Kachelzeile} genügen. Die Anzahl der Kacheln sowie die
+Pixelmaße des Panoramafotos können frei gewählt werden. Hierbei ist zu beachten,
+dass mit steigender Pixelanzahl die Qualität der 360-Grad-Darstellung steigt,
+die Performance der Anwendung jedoch aufgrund der steigenden Datengröße sinkt.
+In einer prototypischen Implementierung, auf die im \verweis{Softwareerstellung}
+näher eingegangen werden soll, hat die Projektgruppe verschiedene Kombinationen
+aus Pixekmaße und Kachelanzahl getestet. Letztendlich hat sich die Projektgruppe
+auf die Pixelmaße 4096x2048 für das gesamte Panorama und eine Aufteilung in 8
+mal 4 Kacheln entschieden. Diese Kombination wurde einheitlich als bester
+Kompromiss zwischen Qualität und Performanz angesehen.
+
+\subsubsection{Equipment für die Panoramaerstellung}
+\label{sec:Equipment}
+
+In dem vorherigen Abschnitt wurde herausgestellt, dass die zu erstellenden
+Panoramafotos der Rektangularprojektion genügen müssen, um in der Anwendung
+korrekt dargestellt zu werden. Für die Aufname eines Fotos, welches dieser
+Darstellungsform genügt, wird spezielles Fotoequipment benötigt\ldots
+
+\subsubsection{Workflow der Panoramaerstellung}
+\label{sec:Workflow}
+
+Der Workflow der Panoramaerstellung kann mehrere Teilprozesse untergliedert
+werden. Für die Umsetzung dieser einzelnen Teilschritte wird hierbei spezielles
+Hard- und Softwareequipment benötigt. Im Folgenden sollen die einzelnen
+Teilschritte der Panoramaerstellung in chronologischer Reihenfolge erläutert
+werden. Hierbei soll auch auf das benötigte Equipment eingegangen werden.
+
+\begin{description}
+\item[Aufnahme der Einzelfotos] Die Panoramaerstellung beginnt mit der Aufnahme
+mehrerer Einzelfotos. Aus diesen Einzelfotos wird nachfolgend dann das komplette
+Panoramafoto erstellt. Dieses muss, wie zuvor erläutert, der
+Rektangularprojektion entsprechen. Die Summe der Einzelfotos muss somit eine
+horizontale Ansicht von 360 Grad und eine vertikale Ansicht von 180 Grad
+abbilden. Die Anzahl der Einzelfotos ist somit von dem Bildwinkel abhängig, der
+auf einem einzelnen Foto dargestellt werden kann. Dieser Bildwinkel wird in der
+Fotografie durch die Brennweite des Objektives festgelegt. Je geringer die
+Brennweite eines Objektives ist, desto größer ist der Bildwinkel, der mit diesem
+Objektiv eingefangen werden kann. Durch spezielle Objektivkonstruktionen wie zum
+Beispiel einem Fischaugenobjektiv ist es möglich einen besonders großen
+Bildwinkel auzunehmen. 
+\end{description}
