@@ -49,9 +49,9 @@ die Performance der Anwendung jedoch aufgrund der steigenden Datengröße sinkt.
 In einer prototypischen Implementierung, auf die im \verweis{Softwareerstellung}
 näher eingegangen werden soll, hat die Projektgruppe verschiedene Kombinationen
 aus Pixekmaße und Kachelanzahl getestet. Letztendlich hat sich die Projektgruppe
-auf die Pixelmaße 4096x2048 für das gesamte Panorama und eine Aufteilung in 8
-mal 4 Kacheln entschieden. Diese Kombination wurde einheitlich als bester
-Kompromiss zwischen Qualität und Performanz angesehen.
+auf die Pixelmaße 4096x2048 für das gesamte Panorama und eine Aufteilung in 32
+Kacheln entschieden. Diese Kombination wurde einheitlich als bester Kompromiss
+zwischen Qualität und Performanz angesehen.
 
 \subsubsection{Workflow der Panoramaerstellung}
 \label{sec:Workflow}
@@ -135,19 +135,57 @@ automatisierten Zusammenfügen noch manuell ausgerichtet werden. Aufgrund
 dieser manuellen Ausrichtung ist es nicht möglich den hier beschriebenen
 Prozess vollständig zu automatisieren. In einem letzen Schritt wird das
 zusammengefügte Panoramafoto dann in das JPEG-Format konvertiert. Dieser Schritt
-wird als Rendering bezeichnet. Das Ergebnis dieses Prozesses ist in Abbildung X
-% TODO: Abbildung einfügen
-dargestellt.
+wird als Rendering bezeichnet. Das Ergebnis dieses Prozesses ist in
+\abbildung{Zusammengefuegt} dargestellt.
 
-\paragraph{Abschließende Bearbeitung} \hfill \\
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.8\textwidth]{Zusammengefuegt.png}
+\caption[Panoramafoto nach Stitching und Rendering]{Panoramafoto nach Stitching
+und Rendering\protect\footnotemark}
+\label{fig:Zusammengefuegt}
+\end{figure}
+\footnotetext{Eigene Darstellung}
 
-Wie bereits zvor beschrieben war es bei der Aufnahme der Einzelfotos nicht
-moglich den Nadir Abzubilden, da sich dort das KAmerastativ befand. Diese
-Bildinformationen fehlen folglich auch in dem zusammengefügten Panoramafoto. Der
-Bereich, in dem Bildinformationen fehlen, ist in Abbildung X
-%TODO: Abbildung einfügen
-durch eine schwarze Fläche markiert.
+\paragraph{Überarbeitung und Optimierung der Panoramafotos} \hfill \\
 
-In einer abschließenden Bearbeitung\ldots
+Da es, wie bereits zuvor erwähnt, bei der Aufnahme der Einzelfotos nicht möglich
+war den Nadir abzubilden, fehlen diese Informationen folglich auch in dem
+zusammengefügten Pa\-no\-ra\-ma\-fo\-to. In \abbildung{Zusammengefuegt} ist der
+Bereich, in dem die Bildinformationen fehlen, durch eine schwarze Fläche
+markiert. Im Zuge einer Überarbeitung der Panoramafotos soll dieser schwarze
+Bereich mit einem Label überdeckt werden, auf dem das Logo des Projektes
+dargestellt ist. Das Label muss dabei so verzerrt werden, dass es nach der
+bereits beschriebenden Projezierung durch die Google Street View API entzerrt
+dargestellt ist.
 
-\ldots Die Komplette Bearbeitung erfolgt mit der Software Adobe Photoshop CS5
+Neben der Überarbeitung der Panoramafotos werden diese weiterhin für die
+Darstellung im Internet optimiert. Hierbei wird die Größe des Panoramafotos auf
+die Pixelmaße 4096x2048 reduziert und die JPEG-Datei komprimiert abgesspeichert.
+
+Die Bearbeitung der Panoramafotos erfolgt mit der Software Adobe Photoshop CS5.
+Durch die Stapelverarbeitungsfunktion des Programms können alle hier
+beschriebenen Teilschritte automatisiert durchgeführt werden. Das Ergebnis
+dieses Prozesses ist in \abbildung{Ueberarbeitet} dargestellt.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.8\textwidth]{Ueberarbeitet.png}
+\caption[Panoramafoto nach Überarbeitung und Optimierung]{Panoramafoto nach
+Überarbeitung und Optimierung\protect\footnotemark}
+\label{fig:Ueberarbeitet}
+\end{figure}
+\footnotetext{Eigene Darstellung}
+
+\paragraph{Aufteilung des Panoramafotos in Kacheln} \hfill \\
+
+Das Blickfeld des Benutzers in der Anwendung nimmt immer nur einnen Teil der
+Rundumansicht ein. Somit kann immer nur nur ein Teil des Panoramafotos
+dargestellt werden. Es ist daher nicht sinnvoll das komplette Panoramafoto in
+der Anwendung zu laden, bevor es dem Benutzer präsentiert wird.
+Aus diesem Grund wird das Panoramafoto in einem letzten Bearbeitungsschritt in
+mehrere Kacheln aufgeteilt. Ziel dieser Aufteilung ist eine Steigerung der
+Performanz und eine Reduzierung der Ladezeiten für die Panoramafotos in der
+Anwendung. Es muss immer nur der Teil der Kacheln geladen werden, der dem
+Benutzer aktuell präsentiert wird. Wenn sich das Blickfeld des Benutzers ändert
+können einzelne Kacheln schnell nachgeladen werden.
