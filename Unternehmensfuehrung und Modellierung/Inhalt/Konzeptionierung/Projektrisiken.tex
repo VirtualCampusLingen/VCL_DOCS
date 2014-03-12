@@ -1,7 +1,6 @@
 \subsection{Projektrisiken}
 \label{sec:Projektrisiken}
 
-
 Ein Projekt in dieser größenordnung birgt einige Risiken, die innerhalb der
 Durchführung eintreffen könnten und das Erreichen der Projektziels gefährden.
 Solche Risiken können mittels Maßnahmenplanung im Fall des Eintritts bewältigt
@@ -23,18 +22,16 @@ krankheitsbedingt ausfallen.
 \item[Keine rechtzeitige Fertigstellung der Anwendung]
 Es besteht das Risiko das die Anwendung nicht bis zum geplanten Übergabetermin
 fertiggestellt wird.
-\item[Anwendung entspricht nicht Wünschen des Kunden]
-Die fertige Anwendung kann nicht den Wünschen des Kunden entsprechen.
+\item[Anwendung entspricht nicht Wünschen des Auftraggebers]
+Die fertige Anwendung kann nicht den Wünschen des Auftraggebers entsprechen.
 \item[Qualität der Anwendung nicht ausreichend]
 Die Anwendung entspricht nicht den Qualitätsansprüchen des Kunden.
 \item[Administration der Anwendung zu komplex]
-Es ist zu kompliziert die fertige Anwendung zu Administrieren.
+Es ist zu kompliziert die fertige Anwendung zu administrieren.
 \item[Anwendung wird gehackt und missbraucht]
 Durch eine Sicherheitslücke in der Anwendung erhalten unbefugte zugriff auf die
 Anwendung. 
 \end{description}
-%ToDo: Sind das alle Risiken ? Was ist mit Datenschutz ? Sollen diese hier
-% nochmal beschrieben werden?
 
 Die erkannten Projektrisiken sind anhand von zwei Kriterien zu kategorisieren:
 
@@ -45,40 +42,35 @@ Die erkannten Projektrisiken sind anhand von zwei Kriterien zu kategorisieren:
 
 Die Kategorisierung der erfassten Risiken wird in einer sogennanten Risikomatrix
 dargestellt. An der visuell erfasst wird, wie hoch die Warscheinlichkeit eines
-bestimmten Risikos ist und wie hoch der entstehende Schaden am Projekt
-einzuschätzen ist.
+bestimmten Risikos ist, wie hoch der entstehende Schaden am Projekt
+einzuschätzen ist und mit welcher Maßnahem sich dieses Risiko minimieren lässt.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{ccccl}
 \hline
-\multicolumn{1}{l}{} mögliches Risiko      & Wahrscheinlichkeit & Schadensausmaß
-\\ \hline 
-Ausfall der Server       	& Gering & Mittel  \\ \hline
-Datenverlust             			& Mittel & Hoch  \\ \hline
-Ausfall der personellen Ressourcen  & Mittel & Hoch \\ \hline
-keine rechtzeitige Fertigstellung des Kunden & Mittel & Hoch \\ \hline
-Anwendung entspricht nicht wünschen des Kunden & Gering & Hoch \\ \hline
-Qualität der Anwendung nicht ausreichend & Gering & Hoch \\ \hline
-Zu hoher Wartungsaufwand & Gering & Mittel \\ \hline
-Anwendung wird gehackt und missbraucht & Mittel & Mittel \\ \hline
+\multicolumn{1}{l}{}              & Wahrscheinlichkeit  & Schadensausmaß & Maßnahme                       \\ \hline 
+Ausfall der Server                & Gering              & Mittel         &                                \\ \hline
+Datenverlust             			    & Mittel              & Hoch           & regelmäßige Backups            \\ \hline
+Ausfall personellen Ressourcen    & Mittel              & Hoch           & zentrale Verwaltung            \\ \hline
+Zeitverzug der Fertiggstellung    & Mittel              & Hoch           & Zeitplanung                    \\ \hline
+Auftraggeberwünsche nicht erfüllt & Gering              & Hoch           & Feedbackgetriebene Entwicklung \\ \hline
+Mangelnde Qualität                & Gering              & Hoch           & Anwendungstest                 \\ \hline
+Zu hoher Wartungsaufwand          & Gering              & Mittel         & Usability Best Pracitces       \\ \hline
+Anwendungs Missbrauch             & Mittel              & Mittel         & IT-Security Best Practices     \\ \hline
 \end{tabular}
 \caption{Risikomatrix}%
 \label{tab:Risikomatrix}%
 \end{table}
 
-\ldots
-in Arbeit 
-\ldots
+Jedes dargestellte Risiko mit Begründung der gewählten Wahrscheinlichkeit und des gewählten
+Schadensausmaßes im Detail zu erläutern würde an dieser Stelle zu weit führen
+und ist auch nicht Intention dieser Auflistung. Die dargestellten Risiken
+sollen dem Auftraggeber und allen Stakeholdern des Projektes lediglich verdeutlicht
+werden. Nennenswert ist an dieser Stelle jedoch, dass keine Maßnahme zum Schutz vor
+Serverausfall aufgelistet wurde. Es ist zwar möglich sich vor
+Ausfall eines Server durch redundante Systeme zu schützen, aber die Möglichkeit
+ist in diesem Projekt auf Grund begrenzter Hardwareressourcen nicht gegeben.
 
-
-% Beschreibung der Auswirkungen und warum diese Warscheinlichkeit Mittel und das
-% Schadensausmaß Hoch ist ??
-% Risikoanalyse?!?
-
-
-
-
-
-
-
+Die Projektrisiken sind dem Auftraggeber damit bekannt und die Konzeptionierung der
+Anwendung kann abgeschlossen werden.
