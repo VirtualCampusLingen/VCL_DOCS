@@ -1,16 +1,20 @@
 \subsection{Datenbanken und SQL}
 \label{sec:DatenbankenUndSql}
 
-Eine Datenbank ist das Rückgrat jedes datenverarbeitenden Informationssystems. Dementsprechend häufig sind Datenbanken in 
-verschiedenen Kontexten anzutreffen (Web-, ERP-, mobile Systeme, etc.). Die nachfolgende theoretische Fundierung dient zum 
-Verständnis des Einsatzes der Datenbank im vorliegenden Projekt.
+Eine Datenbank ist das Rückgrat jedes datenverarbeitenden Informationssystems.
+Dementsprechend häufig sind Datenbanken in verschiedensten Kontexten, wie
+besipsielsweise Web-Systemen, ERP-Systemen oder mobilen Systemen anzutreffen.
+Die nachfolgende theoretische Fundierung dient zum Verständnis des Einsatzes der
+Datenbank im vorliegenden Projekt.
 
-"`Eine Datenbank ist eine Sammlung von Daten, die einen Ausschnitt der realen Welt beschreibt."'\footnote{\citet[S.~18]{elmasri2009}}
-Diese
-Sammlung von Daten kann dabei sowohl in Papierform, als auch elektronisch und computergestützt aufbewahrt werden. Vor dem 
-Hintergrund des vorliegenden Projektes gilt die weitere Betrachtung aber ausschließlich den computergestützten Datenbanken.
-In diesem Teilbereich gibt es wiederum verschiedene Datenbanktypen, die sich in der Verwaltung und Haltung der Daten 
-unterscheiden. Die wichtigsten Datenbanktypen sind im Folgenden aus Gründen der Abgrenzung aufgelistet:
+"`Eine Datenbank ist eine Sammlung von Daten, die einen Ausschnitt der realen
+Welt beschreibt."'\footnote{\citet[S.~18]{elmasri2009}} Diese Sammlung von Daten
+kann dabei sowohl in Papierform, als auch in elektronischer und
+computergestützter Form aufbewahrt werden. Vor dem Hintergrund des vorliegenden
+Projektes gilt die weitere Betrachtung jedoch ausschließlich den
+computergestützten Datenbanken. In diesem Teilbereich gibt es wiederum
+verschiedene Datenbanktypen, die sich jeweils in der Verwaltung und Haltung der
+Daten voneinander unterscheiden. Die wichtigsten Datenbanktypen sind hierbei:
 
 \begin{itemize}
   \item hierarchische Datenbanken
@@ -19,30 +23,44 @@ unterscheiden. Die wichtigsten Datenbanktypen sind im Folgenden aus Gründen der
   \item NoSql Datenbanken
 \end{itemize}
 
-Der Fokus dieser Spezialisierung liegt im Folgenden wiederum auf der eingesetzten Technologie im Projektes und damit auf 
-relationalen Datenbanken. 
+Der Fokus liegt im Folgenden auf den relationalen Datenbanken, da diese im
+Projekt eingesetzt werden.
 
-Eine relationale Datenbank beruht auf dem relationalen Datenbankmodell von Edgar F. Codd aus dem Jahre 1970.\footnote{siehe dazu \citet{codd1970}} Grundlage dieses Modells ist der Begriff der Relation, der im Wesentlichen
-eine mathematische Beschreibung einer Tabelle darstellt. Eine relationale Datenbank ist damit eine Sammlung von Tabellen.
+Eine relationale Datenbank beruht auf dem relationalen Datenbankmodell von
+Edgar F. Codd aus dem Jahre 1970.\footnote{siehe dazu \citet{codd1970}}
+Grundlage dieses Modells ist der Begriff der Relation, der im Wesentlichen eine
+mathematische Beschreibung einer Tabelle darstellt. Eine relationale Datenbank
+lässt sich somit als eine Sammlung von Tabellen beschreiben.
 
-Auf den Relationen (Tabellen) einer solchen Datenbank sind bestimmte Operationen definiert, die im Kontext der Mathematik 
-der relationalen Algebra und im Kontext von Datenbanken der Structured Query Language entsprechen.
+Auf den Relationen (Tabellen) einer solchen Datenbank sind bestimmte
+Operationen definiert, die im Kontext der Mathematik der relationalen Algebra
+und im Kontext von Datenbanken der Structured Query Language entsprechen.
 
-Die Structured Query Language (SQL) stammt, genau wie das relationale Datenbankmodell, aus dem Jahre 1970. Über einen Entwicklungszeitraum von mehreren Jahrzehnten 
-wurde SQL zu einer komplexen Sprache, die umfangreiche Möglichkeiten bietet. Dieser Gesamtkomplex wird hier stark verkürzt
-dargestellt und beschränkt sich nur auf die wesentlichen Aspekte, die dem Verständnis des Projektes dienen.
+Die Structured Query Language (SQL) stammt, genau wie das relationale
+Datenbankmodell, aus dem Jahre 1970. Über einen Entwicklungszeitraum von
+mehreren Jahrzehnten wurde SQL zu einer komplexen Sprache, welche umfangreiche
+Möglichkeiten bietet. Dieser Gesamtkomplex wird hier stark verkürzt dargestellt
+und beschränkt sich nur auf die wesentlichen Aspekte, die dem Verständnis des
+Projektes dienen.
 
-SQL dient im Wesentlichen zum Definieren, Kontrollieren und Manipulieren von Datenstrukturen. Um diese 
-Bereiche zu trennen sind in SQL drei Sprachbereiche definiert.
+SQL dient im Wesentlichen zum Definieren, Kontrollieren und Manipulieren von
+Datenstrukturen. Um diese Bereiche voneinander zu trennen sind in der SQL die
+folgenden drei Sprachbereiche definiert:
 
 \begin{description}
-  \item[Data Definition Language (DDL)] dient zum Erstellen, Löschen und Ändern von Tabellen.
-  \item[Data Control Language (DCL)] dient zum Vergeben und Entziehen von Berechtigungen.
-  \item[Data Manipulation Language (DML)] dient zum Lesen, Schreiben, Löschen und Ändern von Datenstrukturen.
+  \item[Data Definition Language (DDL)] dient zum Erstellen, Löschen und Ändern
+  von Relationen.
+  \item[Data Control Language (DCL)] dient zum Vergeben und Entziehen von
+  Berechtigungen.
+  \item[Data Manipulation Language (DML)] dient zum Lesen, Schreiben, Löschen
+  und Ändern von Datenstrukturen.
 \end{description}
 
-Die Sprachbereiche DDL und DCL haben dabei in der Projektentwicklung eher einmaligen Charakter, wohingegen DML 
-kontinuierlich verwendet wird, um dynamisch Informationen zu schreiben oder zu lesen. Die DML tritt dabei als 
-Schnittstelle zwischen Anwendungsprogramm und Datenbank auf (siehe \abbildung{Architektur}). Über die DML sind beispielsweise 
-Befehle definiert, die es erlauben einen Datensatz einer Tabelle zu lesen oder zu verändern. Diese Befehle werden im 
-Anwendungsprogramm aufgerufen und erzeugen damit dynamischen Inhalt für den Anwender.
+Die Sprachbereiche DDL und DCL haben dabei in der Projektentwicklung eher
+einmaligen Charakter, wohingegen DML kontinuierlich verwendet wird, um
+dynamisch Informationen zu schreiben oder zu lesen. Die DML tritt als
+Schnittstelle zwischen Anwendungsprogramm und Datenbank auf (siehe
+\abbildung{Architektur}). Über die DML sind beispielsweise Befehle definiert,
+die es erlauben einen Datensatz einer Tabelle zu lesen oder zu verändern. Diese
+Befehle werden im Anwendungsprogramm aufgerufen und erzeugen hierdurch
+dynamischen Inhalt für den Anwender.

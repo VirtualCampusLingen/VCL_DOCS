@@ -1,34 +1,55 @@
 \subsection{PHP}
 \label{sec:Php}
 
-PHP (Hypertext Preprocessor) ist eine serverseitige Skriptsprache, die mit dem Ziel entwickelt wurde Webseiten dynamisch
-zu gestalten.
-Mit dieser Intention wurde auch im vorliegenden Projekt PHP als Serversprache verwendet. Die nachfolgend beschriebenen
-Grundlagen vermitteln die wichtigsten Aspekte der Sprache PHP, die nötig sind, um die Umsetzung des Projektes
-nachvollziehen zu können.
-Im Gegensatz zu der vorher beschrieben Skriptsprache Javascript ist PHP eine serverseitige Skriptsprache. Dadurch sind
-zwei grundlegende Unterschiede zu Javascript gegeben:
+PHP (Hypertext Preprocessor) ist eine serverseitige Skriptsprache, die mit dem
+Ziel entwickelt wurde, Webseiten dynamisch zu gestalten. Mit dieser Intention
+wurde PHP auch im vorliegenden Projekt verwendet. Die nachfolgend beschriebenen
+Grundlagen vermitteln die wichtigsten Aspekte der Sprache PHP, die nötig sind,
+um die Umsetzung des Projektes nachvollziehen zu können. Im Gegensatz zu der
+vorher beschrieben Skriptsprache Javascript ist PHP eine serverseitige
+Skriptsprache. Dadurch sind zwei grundlegende Unterschiede zu Javascript
+gegeben:
 
-\textbf{1}. PHP wird, wie die Beschreibung "`Serverskriptsprache"' bereits suggeriert, nicht auf dem Client (dem Browser des Nutzers),
-sondern auf dem Webserver der Anwendung ausgeführt. Bei einer Nutzeranfrage an den Webserver wird also erst eine PHP-Routine serverseitig ausgeführt und anschließend wird das angefragte Dokument, inklusive
-Javascriptdateien, an den Client (Browser) ausgeliefert und dort wird dann Javascript-Quellcode ausgeführt.
-
-\textbf{2}. PHP hat weitestgehend vollen Ressourcenzugriff auf dem ausführenden System. Durch PHP-Befehle ist es zum Beispiel möglich Dateien auf dem ausführenden System (Webserver) anzulegen und zu löschen.
-Diese beiden Unterschiede sind wichtig, um das Einsatzfeld von PHP zu verstehen.
+\begin{enumerate}
+  \item PHP wird nicht auf dem Client (dem Browser des Nutzers), sondern auf dem
+  Webserver ausgeführt. Bei einer Nutzeranfrage an den Webserver wird also
+  erst serverseitig eine PHP-Routine ausgeführt und anschließend das vom Nutzer
+  angefragte Dokument, inklusive Javascriptdateien, an den Client (Browser)
+  ausgeliefert. Dort wird der übertragene Javascript-Quellcode dann ausgeführt.
+  \item PHP hat weitestgehend vollen Ressourcenzugriff auf dem ausführenden
+  System. Durch PHP-Befehle ist es zum Beispiel möglich, Dateien auf dem
+  ausführenden System (Webserver) anzulegen und zu löschen. Diese beiden
+  Unterschiede sind wichtig, um das Einsatzfeld von PHP zu verstehen.
+\end{enumerate}
 
 PHP wird im vorliegenden Projekt für die folgenden Aufgaben eingesetzt:
+
 \begin{itemize}
   \item Kommunikation mit der Datenbank
   \item Schreiben von dynamischen HTML
   \item Kopieren von Benutzerdateien auf das ausführende System.
 \end{itemize}
 
-An dieser Stelle wird auf eine ausführliche Beschreibung dieser Aufgaben verzichtet, da diese noch im Laufe der Ausarbeitung genauer betrachtet werden. Die Einsatzfelder von PHP sollen lediglich verdeutlicht werden.
-Um diese Aufgaben zu erfüllen sind in PHP, wie in jeder anderen Programmiersprache auch, Befehle mit einer vorgebenen
-Syntax definiert. Diese Befehle werden im Quellcode in einem besonders gekennzeichneten Bereich geschrieben. Dieser
-Bereich wird durch die Zeichenfolge '<?php' eingeleitet und mit der Zeichenfolge '?>' beendet.
-Abschließend soll das folgende \listing{PHP Grundlagen} die Anwendung von PHP verdeutlichen:
+Auf eine konkrete Beschreibung der Aufgaben soll an dieser Stelle verzichtet
+werden, da diese noch im weiteren Verlauf der Ausarbeitung erfolgt. Es wird hier
+lediglich kurz aufgezeigt, auf welche Weise die oben stehenden Aufgaben von PHP
+umgesetzt werden.
+
+Um die Aufgaben zu erfüllen sind in PHP, wie in jeder anderen Programmiersprache
+auch, Befehle mit einer vorgebenen Syntax definiert. Diese Befehle werden im
+Quellcode in einem besonders gekennzeichneten Bereich geschrieben. Dieser
+Bereich wird durch die Zeichenfolge '<?php' eingeleitet und mit der
+Zeichenfolge '?>' beendet. Das \listing{PHP Grundlagen} soll diese Anwendung
+von PHP verdeutlichen:
 
 \lstinputlisting[language=PHP,caption={PHP Grundlagen},label={lst:PHP Grundlagen}]{Listings/PHP_Grundlagen.php}
 
-In diesem Beispiel wird die Anfrage eines Benutzers ausgewertet. Die eigentliche Anfrage ist dabei nebensächlich und aus diesem Grund nicht dargestellt (auskommentiert in Zeile 2). Die Auswertung der Anfrage soll an dieser Stelle zeigen auf welchem Weg mit Hilfe von PHP dynamisches HTML geschrieben werden kann. In dem dargestellten Beispiel wird die Benutzeranfrage ausgewertet und je nachdem, was diese Anfrage zurückliefert wird ein HTML p-Tag mit anderem Inhalt geschrieben. Im Browser des Benutzers würde dadurch ausgegebn, ob seine Anfrage positiv oder negativ ausgewertet wurde.
+In dem Beispiel wird die Anfrage eines Benutzers ausgewertet. Die
+eigentliche Anfrage ist hierbei nebensächlich und ist aus diesem Grund im
+Listing nicht dargestellt (siehe Kommentar in Zeile 2). Die Auswertung der
+Anfrage soll an dieser Stelle zeigen auf welchem Weg mit Hilfe von PHP
+dynamisches HTML geschrieben werden kann. In dem dargestellten Beispiel wird die
+Anfrage des Benutzers ausgewertet und ein HTML p-Tag geschrieben, dessen Inhalt
+von dem Ergebnis der Abfrage abhängig ist. Dem Benutzer wird durch die Ausgabe
+des p-Tags im Browser angezeigt, ob seine Anfrage positiv oder negativ
+ausgewertet wurde.
