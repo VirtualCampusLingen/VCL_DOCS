@@ -22,6 +22,17 @@
 \usepackage{lmodern} % bessere Fonts
 \usepackage{relsize} % Schriftgröße relativ festlegen
 
+% Tabellen ---------------------------------------------------------------------
+\PassOptionsToPackage{table}{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+% für lange Tabellen -----------------------------------------------------------
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{lscape}
+\newcolumntype{w}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+
 % Grafiken ---------------------------------------------------------------------
 % Einbinden von JPG-Grafiken ermöglichen
 \usepackage[dvips,final]{graphicx}
@@ -180,15 +191,6 @@
 % fortlaufendes Durchnummerieren der Fu�noten ----------------------------------
 \usepackage{chngcntr}
 
-% für lange Tabellen -----------------------------------------------------------
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{ragged2e}
-\usepackage{lscape}
-
-% Spaltendefinition rechtsb�ndig mit definierter Breite ------------------------
-\newcolumntype{w}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
-
 % Formatierung von Listen �ndern -----------------------------------------------
 \usepackage{paralist}
 
@@ -219,6 +221,8 @@
 % Farben für Tabellen
 \definecolor{dunkelgrau}{rgb}{0.8,0.8,0.8}
 \definecolor{hellgrau}{rgb}{0.95,0.95,0.95}
+\definecolor{heading}{rgb}{0.64,0.78,0.86}
+\definecolor{odd}{rgb}{0.9,0.9,0.9}
 
 \usepackage{subfigure}
 

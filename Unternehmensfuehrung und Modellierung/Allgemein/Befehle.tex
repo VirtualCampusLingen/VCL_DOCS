@@ -1,8 +1,5 @@
 ﻿% Eigene Befehle und typographische Auszeichnungen f�r diese
 
-% einfaches Wechseln der Schrift, z.B.: \changefont{cmss}{sbc}{n}
-\newcommand{\changefont}[3]{\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
-
 % Abk�rzungen mit korrektem Leerraum 
 \newcommand{\ca}{ca.\ }
 \newcommand{\Vgl}{Vgl.\ }
@@ -18,6 +15,31 @@
 \newcommand{\listing}[1]{Listing~\ref{lst:#1} (\nameref{lst:#1})}
 \newcommand{\verweis}[1]{Abschnitt~\ref{sec:#1} (\nameref{sec:#1})}
 \newcommand{\anhang}[1]{Anhang~\ref{sec:#1} (\nameref{sec:#1})}
+
+% fügt Tabellen aus einer TEX-Datei ein
+\newcommand{\tabelleEinfg}[3] % Parameter: caption, label, file
+{\begin{table}[htbp]
+\centering
+\singlespacing
+\input{Tabellen/#3}
+\caption{#1}
+\label{#2}
+\end{table}}
+
+% Fontstyle einer ganzen Tabellenzeile ändern
+\usepackage{array}
+\newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+  #1\ignorespaces
+}
+
+% Stile für Tabellenzeilen
+\newcommand{\header}{\rowcolor{heading}\rowstyle{\bfseries}}
+\newcommand{\result}{\rowcolor{heading}\rowstyle{\itshape}}
+
+% einfaches Wechseln der Schrift, z.B.: \changefont{cmss}{sbc}{n}
+\newcommand{\changefont}[3]{\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 
 \newcommand{\bs}{$\backslash$}
 
