@@ -1,11 +1,12 @@
 \subsubsection{Workflow der Panoramaerstellung}
 \label{sec:Workflow}
 
-Der Workflow der Panoramaerstellung kann mehrere Teilprozesse untergliedert
+Der Workflow der Panoramaerstellung kann in mehrere Teilprozesse untergliedert
 werden. Für die Umsetzung dieser einzelnen Teilschritte wird hierbei spezielles
 Hard- und Softwareequipment benötigt. Im Folgenden sollen die einzelnen
 Teilschritte der Panoramaerstellung in chronologischer Reihenfolge erläutert
-werden. Hierbei soll auch auf das benötigte Equipment eingegangen werden.
+werden. Im Zuge dessen soll auch auf das benötigte Equipment eingegangen
+werden.
 
 \paragraph{Aufnahme der Einzelfotos} \hfill \\
 
@@ -18,24 +19,23 @@ von dem Bildwinkel abhängig, der auf einem einzelnen Foto dargestellt werden
 kann. Dieser Bildwinkel wird in der Fotografie durch die Brennweite des
 Objektives festgelegt. Je geringer die Brennweite eines Objektives ist, desto
 größer ist der Bildwinkel, der mit diesem Objektiv eingefangen werden kann und
-desto Weniger Einzelfotos werden für die Panoramafotos benötigt. Durch
-spezielle Objektivkonstruktionen wie zum Beispiel einem Fischaugenobjektiv ist
-es möglich einen besonders großen Bildwinkel aufzunehmen. Ein solches Objektiv
-und eine zum dem Objektiv kompatible Kamera wird auch für die Aufnahme der
+desto weniger Einzelfotos werden für die Erstellung eines Panoramafotos
+benötigt. Durch spezielle Objektivkonstruktionen wie zum Beispiel einem
+Fisheye-Obektiv ist es möglich einen besonders großen Bildwinkel aufzunehmen.
+Ein solches Objektiv und eine zum dem Objektiv kompatible Kamera wird auch für die Aufnahme der
 Panoramafotos im Projekt verwendet. Das Objektiv ermöglicht es in 16 Fotos alle
 Ansichten Aufzunehmen, die zur Darstellung einer Rektangularprojektion benötigt
 werden. In 15 dieser Einzelfotos ist hierbei die horizontale Rundumansicht
-dargestellt. Das sechzente Foto bildet den Zenit\footnote{Der Zenit ist der
+dargestellt. Das sechzehnte Foto bildet den Zenit\footnote{Der Zenit ist der
 Punkt über dem Beobachter/der Kamera} im Panoramafoto ab. Der
 Nadir\footnote{Der Nadir ist der dem Zent gegenüber gelegene Punkt unter dem
 Beobachter/der Kamera} wird in den Panoramafotos nicht abgebildet, da sich hier
-das Stativ befindet. Die aufgenommenen Einzelfotos müssen sich überschneiden,
-um ein späteres Zusammenfügen der Fotos zu ermöglichen.
+das Stativ befindet.
 
 Zur Unterstützung bei der Aufnahme hat sich die Projektgruppe weiterhin
 entschieden ein speziell für die Panoramafotografie ausgelegtes Stativ zu
 verwenden. Eine Aufnahme ohne dieses Stativ wäre zwar denkbar, würde die
-Qualität der Panoramafotos jedoch stark beeinträchtigen. Dieses Panoramastativ
+Qualität der Panoramafotos jedoch stark beeinträchtigen. Das Panoramastativ
 besteht aus folgenden Komponenten:
 
 \begin{description}
@@ -73,10 +73,10 @@ ist in \abbildung{Equipment} dargestellt.
 Nachdem die Einzelfotos aufgenommen wurden müssen diese zu einem Panoramafoto
 zusammengefügt werden. Dieser Prozess wird als Stitching bezeichnet. Das
 Stitching erfolgt im Projekt mit der Software Kolor Autopano Giga 3.0. Die
-Software ist in der Lage die Einzelfotos automatisiert Zusammenzufügen.
+Software ist in der Lage, die Einzelfotos automatisiert zusammenzufügen.
 Gegebenenfall muss das hieraus resultierende Panoramafoto nach dem
 automatisierten Zusammenfügen noch manuell ausgerichtet werden. Aufgrund
-dieser manuellen Ausrichtung ist es nicht möglich den hier beschriebenen
+dieser manuellen Ausrichtung ist es nicht möglich, den hier beschriebenen
 Prozess vollständig zu automatisieren. In einem letzen Schritt wird das
 zusammengefügte Panoramafoto dann in das JPEG-Format konvertiert. Dieser Schritt
 wird als Rendering bezeichnet. Das Ergebnis dieses Prozesses ist in
@@ -93,15 +93,14 @@ und Rendering\protect\footnotemark}
 
 \paragraph{Überarbeitung und Optimierung der Panoramafotos} \hfill \\
 
-Da es, wie bereits zuvor erwähnt, bei der Aufnahme der Einzelfotos nicht möglich
-war den Nadir abzubilden, fehlen diese Informationen folglich auch in dem
-zusammengefügten Pa\-no\-ra\-ma\-fo\-to. In \abbildung{Zusammengefuegt} ist der
-Bereich, in dem die Bildinformationen fehlen, durch eine schwarze Fläche
-markiert. Im Zuge einer Überarbeitung der Panoramafotos soll dieser schwarze
-Bereich mit einem Label überdeckt werden, auf dem das Logo des Projektes
-dargestellt ist. Das Label muss dabei so verzerrt werden, dass es nach der
-bereits beschriebenden Projezierung durch die Google Street View API entzerrt
-dargestellt ist.
+Da es bei der Aufnahme der Einzelfotos nicht möglich war den Nadir abzubilden,
+fehlen diese Informationen folglich auch in dem zusammengefügten
+Pa\-no\-ra\-ma\-fo\-to. In \abbildung{Zusammengefuegt} ist der Bereich, in dem
+die Bildinformationen fehlen, durch eine schwarze Fläche markiert. Im Zuge
+einer Überarbeitung der Panoramafotos soll dieser schwarze Bereich mit einem
+Label überdeckt werden, auf dem das Logo des Projektes dargestellt ist. Das
+Label muss dabei so verzerrt werden, dass es nach der bereits beschriebenden
+Projezierung durch die Google Street View API entzerrt dargestellt ist.
 
 Neben der Überarbeitung der Panoramafotos werden diese weiterhin für die
 Darstellung im Internet optimiert. Hierbei wird die Größe des Panoramafotos auf
@@ -124,7 +123,7 @@ dieses Prozesses ist in \abbildung{Ueberarbeitet} dargestellt.
 \paragraph{Aufteilung des Panoramafotos in Kacheln} \hfill \\
 
 Das Blickfeld des Benutzers in der Anwendung nimmt immer nur einen Teil der
-Rundumansicht ein. Somit kann immer nur ein Teil des Panoramafotos
+Rundumansicht ein. Somit kann auch immer nur ein Teil des Panoramafotos
 dargestellt werden. Es ist daher nicht sinnvoll das komplette Panoramafoto in
 der Anwendung zu laden, bevor es dem Benutzer präsentiert wird.
 Aus diesem Grund wird das Panoramafoto in einem letzten Bearbeitungsschritt in
@@ -133,3 +132,8 @@ Performanz und eine Reduzierung der Ladezeiten für die Panoramafotos in der
 Anwendung. Es muss immer nur der Teil der Kacheln geladen werden, der dem
 Benutzer aktuell präsentiert wird. Wenn sich das Blickfeld des Benutzers ändert
 können einzelne Kacheln schnell nachgeladen werden.
+
+Die Aufteilung der Panoramafotos im Projekt erfolgt, wie auch die Überarbeitung
+der Fotos, mit der Software Adobe Photoshop CS5. Auch hier kann die
+Stapelverarbeitungsfunktion genutzt werden, um die Aufteilung der Panoramafotos
+zu automatisieren.
