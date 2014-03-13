@@ -7,8 +7,8 @@ dazu, das Projekt in einem geordneten Ablauf zu strukturieren und
 Arbeitsschritte aufeinander aufbauend zu vergeben. "`Der Aufbau der
 Projektphasen ist darauf ausgerichtet, systematisch und aufeinander aufbauend
 zu 'lernen', um insgesamt eine optimale Entscheidungsprozedur zu
-durchlaufen"'.
-% TODO: Verweis auf Quelle walter2006
+durchlaufen"'.\footnote{\citet{walter2006}}
+
 Jede Projektphase stellt dabei eine in sich geschlossene Einheit dar, die aus
 mehreren Arbeitspaketen und Meilensteinen bestehen kann. Arbeitspakete sind
 dabei konkrete Arbeitsschritte, die von einer ausgewählten Person in einem
@@ -17,34 +17,36 @@ Erfüllung des jeweils nächsten Meilensteines hin.
 
 Meilensteine bilden wichtige, elementare "`Stationen"' in einem Projekt ab. Sie
 strukturieren das Projekt durch zeitliches Festlegen von Teilzielen.
-% TODO: Verweis auf Quelle schels2008
 Darüber hinaus kann an den abgeschlossenen Meilensteinen
-der Erfüllungsgrad des Projektzieles abgelesen werden.
-% TODO: Verweis auf Quelle schels2008
+der Erfüllungsgrad des Projektzieles abgelesen werden.\footnote{\citet{schels2008}}
+
 Jede Projektphase endet daher mit einem Meilenstein. Der Projektphasenplan mit
 den jeweiligen abschließenden Meilensteinen ist in nachfolgender Abbildung
 dargestellt:
 
-% TODO: Abbildung einfügen
+\begin{figure}[htb] 
+\centering
+\includegraphics[width=1.0\textwidth]{Phasenplan.png}
+\caption[Phasenplan des Projektes]{Phasenplan des Projektes\protect\footnotemark}
+\label{fig:MockupFrontend}
+\end{figure}
+\footnotetext{eigene Darstellung}
 
 \begin{description}
 
   \item[Die Analysephase] ist Ausgangspunkt der vorliegenden Projektarbeit. Sie setzt
-  auf der aktuellen Ist-Situation auf und in ihr werden Lösungsmöglichkeiten für
+  auf der aktuellen Ist-Situation an und in ihr werden Lösungsmöglichkeiten für
   das vorhandene Problem analysiert. Am Ende der Analysephase steht eine
-  konzeptionelle Problemlösung. Das bedeutet konkret aus der Analyse der
+  konzeptionelle Problemlösung. Das bedeutet konkret, aus der Analyse der
   vorliegenden Situation werden verschiedene Lösungsansätze entwickelt. Im
   Zuge der Analyse und Auswertung dieser Lösungsansätze wird ein Ansatz
-  ausgewählt der für die Lösung am geeignetsten ist. Die Analysephase ist in
+  ausgewählt, der für die Lösung am geeignetsten ist. Die Analysephase ist in
   der vorliegenden Ausarbeitung im \verweis{Konzeptionierung} beschrieben.
-  % TODO: Verweis auf Quelle
 
   Die Ergebnisse der Analyse werden in einem Lastenheft\footnote{\citet{lastenheft2013}} formuliert.
 
   Die Analysephase wird mit dem Meilenstein "`Problemlösung definieren und
-  Lastenheft angefertigt"' abgeschlossen. 
-  %ToDo: Heißt der Meilenstein wirklich so?
-
+  Lastenheft angefertigt"' abgeschlossen.
 
   \item[Die Entwurfsphase] folgt im Anschluss auf die Analysephase.
   Ausgangspunkt der Entwurfsphase ist ein angefertigtes Lastenheft. Aufgrund der
@@ -71,7 +73,6 @@ dargestellt:
 
   Die Entwurfsphase wurde mit dem Meilenstein "`Pflichtenheft abgeschlossen und
   Architekturplan erstellt"' abgeschlossen.
-  %ToDo: Ist das der Name des Meilenstein?
 
   \item[Die Implementierungsphase] folgt im Anschluss an die Entwurfsphase und
   baut auf einem abgeschlossenen Pflichtenheft auf. Diese Phase ist sowohl die
@@ -83,11 +84,10 @@ dargestellt:
   schnellsten lässt sich Software entwickeln, wenn das dazugehörige Modell
   1:1 in Quellcode übertragen werden kann. Allerdings ist das, aufgrund der
   Schwierigkeit eine Software in seiner Komplexität in einem Modell zu erfassen,
-  häufig schwer zu erreichen. Bei unerwartetem Abweichen vom Modell, muss daher
+  häufig schwer zu erreichen. Bei unerwartetem Abweichen vom Modell muss daher
   die Konzeption der Software erneut überdacht werden, um eventuellen logischen
   Fehlern vorzubeugen. Der Prozess dieser Implementierung kann in der
   Ausarbeitung Modellierung und Betrieb in Kapitel 5. (Umsetzung) nachgelesen werden.
-  % TODO: Titel der anderen Ausarbeitung ändern?
 
   Die Implementierungsphase endet mit dem Meilenstein "`Anwendung voll
   funktionsfähig fertiggestellt"'.
@@ -103,7 +103,6 @@ dargestellt:
   Idealfall ein Alphatest der Entwickler vorausgegangen, in dem sie die entwickelten Anwendungsfälle (use cases) im fertigen Programm simulieren und dabei mögliche
   Fehler entdecken und ausbessern können. Der Alphatest wird in dieser Ausarbeitung nicht näher betrachtet,
   kann aber in \citet{modelierungUndBetrieb2014} nachgelesen werden.
-  %ToDo: Sätze etwas gekürzt. Ok?
   In der Betatestphase ist es besonders wichtig die  aufgetretenen Fehler
   und Kritiken zu erfassen und an die Entwickler weiterzugeben. Durch den
   Betatest können sogenannte "`Kinderkrankheiten"' früh erkannt und beseitigt

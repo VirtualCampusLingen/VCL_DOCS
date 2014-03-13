@@ -1,7 +1,12 @@
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
 \rowcolors{1}{odd}{}
-\begin{tabular}{$l^l^l^l^l} \hline
-\header & Innovativität & Attraktivität & Komplexität & Grad der Zielerreichung \\ \hline 
-Fotogalerie                       & gering        & mittel        & gering      & gering                  \\ \hline 
-Virtueller 3D Rundgang            & hoch          & hoch          & sehr hoch   & hoch                    \\ \hline
-Google Street View Rundgang       & hoch          & hoch          & hoch        & hoch                    \\ \hline
+\begin{tabular}{$>{\centering}m{1in}^>{\centering}m{1in}^>{\centering}m{1in}^>{\centering}m{1in}^>{\centering\arraybackslash}m{1in}}
+  % \toprule
+  \hline
+  \header Alternative & Innovativität & Attraktivität & Komplexität & Grad der Zielerreichung \\ \hline
+  % \midrule
+  Fotogalerie                       & gering        & mittel        & gering      & gering \\ \hline
+  Virtueller 3D Rundgang            & hoch          & hoch          & sehr hoch   & hoch \\ \hline
+  Google Street View Rundgang       & hoch          & hoch          & hoch        & hoch \\ \hline
+  % \bottomrule
 \end{tabular}

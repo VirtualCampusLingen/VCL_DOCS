@@ -1,12 +1,14 @@
 \rowcolors{1}{odd}{}
-\begin{tabular}{$l^l^l^l^l} \hline
-\header & Wahrscheinlichkeit  & Schadensausmaß & Maßnahme                       \\ \hline
-Ausfall der Server                & Gering              & Mittel         &                                \\ \hline
-Datenverlust             			    & Mittel              & Hoch           & regelmäßige Backups            \\ \hline
-Ausfall personellen Ressourcen    & Mittel              & Hoch           & zentrale Verwaltung            \\ \hline
-Zeitverzug der Fertiggstellung    & Mittel              & Hoch           & Zeitplanung                    \\ \hline
-Auftraggeberwünsche nicht erfüllt & Gering              & Hoch           & Feedbackgetriebene Entwicklung \\ \hline
-Mangelnde Qualität                & Gering              & Hoch           & Anwendungstest                 \\ \hline
-Zu hoher Wartungsaufwand          & Gering              & Mittel         & Usability Best Pracitces       \\ \hline
-Anwendungs Missbrauch             & Mittel              & Mittel         & IT-Security Best Practices     \\ \hline
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\begin{tabular}{$>{\centering}m{2in}^>{\centering}m{1in}^>{\centering}m{1in}^>{\centering\arraybackslash}m{1in}}
+\hline
+\header Risiko & Wahr\-schein\-lich\-keit  & Scha\-dens\-aus\-maß & Maßnahme                       \\ \hline
+Ausfall der Server                & gering              & mittel         &                                \\ \hline
+Datenverlust                      & mittel              & hoch           & regelmäßige Backups            \\ \hline
+Ausfall personeller Ressourcen    & mittel              & hoch           & zentrale Verwaltung            \\ \hline
+Zeitverzug der Fertiggstellung    & mittel              & hoch           & Zeitplanung                    \\ \hline
+Auftraggeberwünsche nicht erfüllt & gering              & hoch           & feed\-back\-ge\-trie\-be\-ne Entwicklung \\ \hline
+mangelnde Qualität                & gering              & hoch           & Anwendungstest                 \\ \hline
+zu hoher Wartungsaufwand          & gering              & mittel         & Usability Best Pracitces       \\ \hline
+Anwendungsmissbrauch             & mittel              & mittel         & IT-Security Best Practices     \\ \hline
 \end{tabular}
