@@ -1,0 +1,43 @@
+\subsubsection{Anforderungen an die Panoramafotos}
+\label{sec:PanoramaerstellungAnforderungen}
+
+Die Panoramaerstellung stellt, neben der Softwareerstellung einen zentralen
+Teilprozess innerhalb der Projektumsetzung dar. Bevor mit der Erstellung der
+Panoramas begonnen werden kann müssen zunächst die Anforderungen der Anwendung
+an die Panoramafotos festgelegt werden. Hierbei muss definiert werden, welche
+Kriterien die Panoramafotos erfüllen müssen, um von der Anwendung korrekt
+verarbeitet werden zu können. Relevante Kriterien sind hierbei die
+Darstellungsform, die Größe und das Format der Panoramafotos. Nachdem diese
+Schnittstelle festgelegt ist kann der Prozess der Panoramaerstellung isoliert
+vom Prozess der Softwareerstellung durchgeführt werden. Dies ermöglicht eine
+parallele Umsetzung der beiden Teilprozesse.
+
+Wie bereits in \verweis{Architektur} erwähnt soll in der Anwendung die Google
+Street View API verwendet werden. Diese Schnittstelle stellt die Funktionalität
+zur Anzeige der Panoramafotos zur Verfügung. Somit legt diese Schnittstelle auch
+fest, in welcher Form die Panoramafotos zur Verfügung gestellt werden müssen.
+Diese Anforderungen können aus der Entwicklerdokumentation zu der API entnommen
+werden. Die Schnittstelle erwartet hierbei ein Panoramafoto, welches der
+Rektangulatprojektion\footnote{Die Rektangularprojektion stellt eine
+horizontale Ansicht von 360 Grad und eine vertikale Ansicht von 180 Grad dar.
+Dies bedingt ein Seitenverhälnis von 2:1} entspricht. Durch die API wird diese
+Darstellung auf die Fläche einer Kugel projeziert. Der Mittlepunkt dieser Kugel
+stellt den Standpunkt des Betrachters dar. Da sich immer nur ein Teil der
+Projektion im Blickfeld dieses Betrachters befindet muss auch nur der aktuell
+sichtbare Bereich des Panoramafotos dargestellt werden. Aus diesem Grund bietet
+die Google Street View API die Möglichkeit, ein in mehrere rechteckige Teile,
+sogenannte Kacheln, aufgeteiltes Panoramafoto zu verarbeiten. Auf diese Weise
+kann die Performanz der Anwendung erhöht werden, da nicht das komplette
+Panoramafoto, sondern nur ein Teil der Kacheln in der Anwendung geladen werden
+muss. Damit den einzelnen Kacheln die korrekte Position auf der Planarprojektion
+zugewiesen werden kann, muss die Benennung der Kacheldateien dem Namensschema
+\texttt{Kachelspalte-Kachelzeile} genügen. Die Anzahl der Kacheln sowie die
+Pixelmaße des Panoramafotos können frei gewählt werden. Hierbei ist zu beachten,
+dass mit steigender Pixelanzahl die Qualität der 360-Grad-Darstellung steigt,
+die Performance der Anwendung jedoch aufgrund der steigenden Datengröße sinkt.
+In einer prototypischen Implementierung, auf die im \verweis{Softwareerstellung}
+näher eingegangen werden soll, hat die Projektgruppe verschiedene Kombinationen
+aus Pixekmaße und Kachelanzahl getestet. Letztendlich hat sich die Projektgruppe
+auf die Pixelmaße 4096x2048 für das gesamte Panorama und eine Aufteilung in 32
+Kacheln entschieden. Diese Kombination wurde einheitlich als bester Kompromiss
+zwischen Qualität und Performanz angesehen.
