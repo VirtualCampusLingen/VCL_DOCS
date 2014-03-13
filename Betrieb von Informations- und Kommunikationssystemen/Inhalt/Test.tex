@@ -1,63 +1,93 @@
 \section{Test}
 \label{sec:Test}
 
-Die zu erstellende Software ist mit Abschluss der Umsetzungsphase fertiggestellt und einsatzbereit. Vor Projektabschluss und -übergabe soll die Software auf ihre Qualität geprüft werden. Es soll darüber hinaus verifiziert werden, dass die Anforderungen des Lastenheftes umgesetzt wurden. Sowohl Qualität, als auch die Umsetzung der Anforderungen werden im Folgenden in einem zweistufigen Praxistest der Software sichergestellt.
+Die Anwendung ist nach Abschluss der Umsetzungsphase fertiggestellt und
+einsatzbereit. Vor Projektabschluss und -übergabe soll die Software auf ihre
+Qualität geprüft werden. Es soll darüber hinaus verifiziert werden, dass alle
+Anforderungen des Lastenheftes umgesetzt wurden. Sowohl die Qualität der
+Anwendung, als auch die Umsetzung aller Anforderungen werden im Folgenden in
+einem zweistufigen Praxistest der Software überprüft.
 
-Im ersten Schritt wird die Software einem Alphatest unterzogen. Ein Alphatest liegt immer dann vor, wenn die Tests von Personen durchgeführt werden, die an der Entwicklung eines Produktes beteiligt waren, in diesem Fall das Projektteam. In diesem Test werden vor allem die Produktfunktionen des Lastenheftes (siehe Abschnitt \nameref{sec:Lastenheft} auf Seite \pageref{sec:Lastenheft}) überprüft. In diesem Test sollen erste grobe Fehler in Bedienung, Anzeige und Verhalten gefunden werden und es soll zusätzlich sichergestellt werden, dass alle Anforderungen des Auftraggebers umgesetzt sind. Die Tests der Produktfunktionen werden zusätzlich in den vier führenden Browsern\footnote{Quelle: \url{http://www.chip.de}} durchgeführt, um browserübergreifende Funktionalität sicherzustellen.
-Dabei wurden jeweils die Testbereiche Bedienung, Anzeige und Verhalten unterschieden. Das Ergebnis des durchgeführten Alphatests ist in nachfolgender \abbildung{Alphatest} festgehalten:
+Im ersten Schritt wird die Software einem Alphatest unterzogen. Ein Alphatest
+liegt hierbei vor, wenn der Test von Personen durchgeführt wird, welche an
+der Entwicklung des zu testenden Produktes beteiligt waren. In diesem Fall
+wird der Alphatest also vom Projektteam durchgeführt. In dem Alphatest werden
+vor allem die in \verweis{Lastenheft} genannten Produktfunktionen des
+Lastenhefts überprüft. In dem Test sollen erste grobe Fehler in Bedienung,
+Anzeige und Verhalten identifiziert werden und es soll zusätzlich sichergestellt
+werden, dass alle Anforderungen des Auftraggebers umgesetzt wurden. Die Tests
+der Produktfunktionen werden in den vier führenden Browsern\footnote{Quelle:
+\url{http://www.chip.de}} Chrome, Firefox, Internet Explore und Safari
+durchgeführt, um browserübergreifende Funktionalität sicherzustellen.
+Dabei werden die Testbereiche Bedienung, Anzeige und Verhalten untersucht. Das
+Ergebnis des durchgeführten Alphatests ist in \abbildung{Alphatest} dargestellt.
 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{Alphatest.png}
-\caption[Mockup Backend]{Graphische Darstellung des Alphatests\protect\footnotemark}
+\caption[Graphische Darstellung des Alphatests]{Graphische Darstellung des Alphatests\protect\footnotemark}
 \label{fig:Alphatest}
 \end{figure}
 \footnotetext{Quelle: Eigene Darstellung}
 
-Die Auswertung des Alphatests zeigt, dass alle Anforderungen umgesetzt wurden und funktionsfähig sind. Darüber hinaus
-traten in keinem der geprüften Anwendungsfälle Fehler auf.
-Dagegen zeigten sich aber beim Vergleich der verschiedenen getesteten Browser deutliche Unterschiede in der
-Darstellungsgeschwindkeit.
-Die Möglichkeit sich in einzelnen Panoramafotos umzusehen, stellte sich zum Beispiel im Google Chrome Browser
-flüssiger dar, als im Internet Explorer oder im Firefox-Browser. Es wird daher empfohlen den Google Chrome Browser
-zur Benutzung der Software zu verwenden.
-Neben browserspezifischen Darstellungsunterschieden konnten in diesem Alphatest auch kleinere Schwachstellen und Fehler gefunden werden, die nicht in den Anwendungsfällen enthalten waren. Als Beispiel kann hierfür die 
-falsche Verlinkung einer Datei oder das Fehlen einer Sicherheitsabfrage beim Löschen eines Datensatzes angeführt
-werden.
-Diese Mängel wurden im Anschluss an den Alphatest direkt beseitigt.
-Der Alphatest zeigt aus Sicht des Entwicklerteams den funktionalen Erfolg des Projektes.
+Die Auswertung des Alphatests zeigt, dass alle Anforderungen in der
+Anwendung umgesetzt wurden. Darüber hinaus traten in keinem der geprüften
+Anwendungsfälle Fehler auf. Es zeigten sich jedoch beim Vergleich der
+verschiedenen getesteten Browser deutliche Unterschiede in der
+Darstellungsgeschwindkeit. Das Umsehen in den einzelnen Panoramafotos stellt
+sich so im Chrome-Browser flüssiger als im Internet Explorer oder im
+Firefox dar. Aus diesem Grund wird der Chrome-Browser für die Benutzung der
+Anwendung empfohlen.
 
-Im zweiten Schritt der Testphase wird die Software einem Betatest unterzogen. Dieser Betatest wird von Personen
-durchgeführt, die an der Entwicklung nicht beteiligt waren. Dieser Test wurde von dem Projektteam durchgeführt,
-um weitere Fehler in der Software zu identifizieren und Projektziele zu verifizieren. Die Verifikation der Projektziele
-durch den Betatest ist dabei nicht primärer Gegenstand der vorliegenden Projektbetrachtung und wird daher
-nicht weiter vertieft. Die Verifikation der Ziele kann in \citet{unternehmensfuehrung2014} nachgelesen werden.
-Die Folgende Auflistung zeigt Fehler und Verbesserungsvorschläge, die von Betatestern geäußert wurden:
+Neben browserspezifischen Darstellungsunterschieden konnten in dem Alphatest
+auch kleinere Schwachstellen der Anwendung gefunden werden, die nicht in den
+Anwendungsfällen berücksichtigt wurden. Als Beispiel hierfür kann die falsche
+Verlinkung einer Datei oder das Fehlen einer Sicherheitsabfrage beim Löschen
+eines Datensatzes angeführt werden. Diese Mängel wurden im Anschluss an den
+Alphatest direkt beseitigt. An dem Ergebnis des Alphatests wird aus der Sicht
+des Projektteams der funktionale Erfolg der Anwendung deutlich.
+
+Im zweiten Schritt der Testphase wird die Software einem Betatest unterzogen.
+Dieser Betatest wird von Personen durchgeführt, die nicht an der Entwicklung der
+Anwendung beteiligt waren. Der Test wurde durchgeführt um weitere Fehler in der
+Software zu identifizieren. Weiterhin sollen durch den Betatest auch die
+Projektziele verifiziert werden. Die Verifikation der Projektziele durch den
+Betatest ist in der vorliegenden Projektbetrachtung jedoch nicht relevant und
+wird daher nicht weiter vertieft. Diese kann jedoch in der Ausarbeitung
+"`Unternehmensführung"'\footnote{\citet{unternehmensfuehrung2014}} nachgelesen
+werden. 
+
+Die Folgende Auflistung zeigt Fehler und Verbesserungsvorschläge, welche von
+Betatestern geäußert wurden:
 
 \begin{itemize}
   \item Ausführlichere Erklärungen zur Anwendung
   \item Optimierte Darstellung für mobile Endgeräte
-  \item Einrichtung eines Hilfe Buttons
+  \item Einrichtung eines Hilfe-Buttons
   \item Erstellung einer Übersichtskarte aus Vogelperspektive
   \item Einführung von Tastenkürzeln zum Navigieren
 \end{itemize}
 
-Aufbauend auf diesem verkürzt dargestellten Feedback der Betatester, wird ein weiterer Entwicklungszyklus begonnen, in dem
-diese Kritik ausgebessert wird. Nicht jede Kritik kann dabei berücksichtigt werden. Die verbesserte Darstellung für
-mobile Geräte kann zum Beispiel in diesem Projekt nicht mehr umgestetzt werden, da hierfür ein größerer
-Entwicklungsaufwand nötig wäre.
+Aufbauend auf dem hier nur verkürzt dargestellten Feedback der Betatester wird
+ein weiterer Entwicklungszyklus begonnen, in dem diese Kritik ausgebessert wird.
+Nicht jede Kritik kann dabei berücksichtigt werden. So kann beispielsweise die
+verbesserte Darstellung für mobile Endgeräte im Rahmen des Projektstudiums nicht
+mehr umgestetzt werden, da hierfür ein zu großer Entwicklungsaufwand nötig wäre.
 
-Neben dieser Fehleranalyse wird analog zu dem Alphatest auch im Betatest ein besonderer Fokus auf den
-Erfolg des Projektes aus Sicht der Betatester gelegt. Aus diesem Grund zeigt die folgende Grafik eine subjektive
-Bewertung des Projektes aus Sicht der Betatester.
+Neben der Fehleranalyse wird, analog zu dem Alphatest, auch im Betatest ein
+besonderer Fokus auf den Erfolg des Projektes aus Sicht der Betatester gelegt.
+Hierzu ist in \abbildung{Betatest} eine subjektive Bewertung des Projektes aus
+Sicht der Betatester dargestellt.
 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{Betatest.png}
-\caption[Alphatest Auswertung]{Erfolg des Projektes aus Sicht der Betatester\protect\footnotemark}
+\caption[Erfolg des Projektes aus Sicht der Betatester]{Erfolg des Projektes aus Sicht der Betatester\protect\footnotemark}
 \label{fig:Betatest}
 \end{figure}
 \footnotetext{Quelle: Eigene Darstellung}
 
-Sowohl aus Sicht des Entwicklerteams, als auch aus Sicht der Betatester, erfüllt das Projekt am Ende der Testphase
-seine Funktion und erzielt darüber hinaus deutlich positive Resonanz.
+Sowohl aus Sicht des Entwicklerteams als auch aus Sicht der Betatester erfüllt
+das Projekt am Ende der Testphase die zu Beginn des Projektes definierten
+Anforderungen. Darüber hinaus wurde von den Betatestern viel positive
+Rückmeldung zu dem Projekt geäußert.
