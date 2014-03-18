@@ -9,8 +9,8 @@ und die Beziehung zu anderen Tabellen dargestellt.}
 
 Bevor das Tabellenmodell erstellt werden kann, müssen in dem vorliegenden
 Projekt die Daten identifiziert werden, die persistent in der Datenbank
-gespeichert werden. Aus dem vorgangenen Oberflächenentwurf wird deutlich, dass
-das Projekt aus den zwei Teilen, Benutzeransicht und Administrationsansicht,
+gespeichert werden. Aus dem vorausgegangenen Oberflächenentwurf wird deutlich,
+dass das Projekt aus den zwei Teilen, Benutzeransicht und Administrationsansicht,
 besteht. Die Benutzeransicht stellt dabei Informationen dar, die in der
 Administrationsansicht gepflegt und hinterlegt wurden. Der
 Administrationsbereich ist der datenhaltende Bereich, in dem die Interaktion
@@ -26,11 +26,11 @@ sich bereits folgende drei Informationsobjekte:
 Die Beziehung zwischen Infotexten und Fotos stellt dabei eine sogenannte
 n:m Beziehung dar. In dieser Beziehung kann ein Infotext mehreren Fotos
 zugeordnet sein und im Gegenzug können ebenso mehrere Infotexte auf demselben
-Foto platziert werden. Um eine soche Beziehung in einer relationalen Datenbank
+Foto platziert werden. Um eine solche Beziehung in einer relationalen Datenbank
 abbilden zu können muss eine neue Tabelle angelegt werden, die diese Beziehung
 zwischen Foto und Infotext speichert. Gleiches gilt für die
 Nachbarschaftsbeziehung zwischen zwei Fotos. Da ein Foto mehrere Nachbarfotos
-haben kann muss wiederum eine Tabelle erstellt werden, in der die Beziehung
+haben kann, muss wiederum eine Tabelle erstellt werden, in der die Beziehung
 zwischen Foto und Nachbarfoto gespeichert wird. Neben diesen zwei zusätzlichen
 Tabellen werden noch drei weitere Tabellen für die Speicherung der Daten der
 Übersichtskarte benötigt. In der Übersichtskarte soll grundsätzlich zwischen dem
@@ -38,8 +38,8 @@ Studienstandort an der Baccumer Straße und dem Standort an der Kaiserstraße
 unterschieden werden. Da beide Standorte unterschiedlich parametresiert werden 
 müssen wird hierfür eine eigene Tabelle benötigt. Diese wird mit dem Namen
 \textit{Area} bezeichnet. Eine Area beschreibt hierbei einen topologischen
-Auschnitt einer Google Maps Karte. Da eine topologische Karte nur den Umriss von
-Gebäuden zeigt, ist es schwer, den genauen Standort eines Panoramas zu
+Ausschnitt einer Google Maps Karte. Da eine topologische Karte nur den Umriss
+von Gebäuden zeigt, ist es schwer, den genauen Standort eines Panoramas zu
 bestimmen. Aus diesem Grund werden Grafiken über die Karte gelegt, die die
 innere Struktur (Wände, Gebäudetrackte, etc.) des Campus zeigen. Sowohl die
 topologische Karte als auch die übergelegten Grafiken, im folgenden
@@ -48,7 +48,7 @@ weitere Attribute haben. Ein Overlay ist dabei immer einer Karte zugeordnet.
 Eine Karte kann weiterhin mehrere Overlays besitzen. Über die Zuordnung von
 mehreren Overlays zu einer Karte werden Stockwerke an einem Standort
 dargestellt. Ein Overlay enthält damit unter anderem den Pfad zu einer Grafik,
-die ein Stockwerk an einem Standort darstellt. Zusamengefasst ergeben sich
+die ein Stockwerk an einem Standort darstellt. Zusammengefasst ergeben sich
 folgende Tabellen:
 
 \begin{itemize}
